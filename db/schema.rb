@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110703054306) do
+ActiveRecord::Schema.define(:version => 20110703062141) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -56,15 +56,39 @@ ActiveRecord::Schema.define(:version => 20110703054306) do
 
   add_index "blog_posts", ["id"], :name => "index_blog_posts_on_id"
 
-  create_table "image_pages", :id => false, :force => true do |t|
-    t.integer "image_id"
-    t.integer "page_id"
-    t.integer "position"
-    t.text    "caption"
+  create_table "event_categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "image_pages", ["image_id"], :name => "index_image_pages_on_image_id"
-  add_index "image_pages", ["page_id"], :name => "index_image_pages_on_page_id"
+  create_table "event_categorizations", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "event_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "event_categorizations", ["event_category_id"], :name => "index_event_categorizations_on_event_category_id"
+  add_index "event_categorizations", ["event_id"], :name => "index_event_categorizations_on_event_id"
+
+  create_table "events", :force => true do |t|
+    t.string   "title"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string   "venue_name"
+    t.string   "venue_address"
+    t.decimal  "ticket_price",  :precision => 8, :scale => 2
+    t.string   "ticket_link"
+    t.text     "description"
+    t.boolean  "featured"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["id"], :name => "index_events_on_id"
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -77,6 +101,14 @@ ActiveRecord::Schema.define(:version => 20110703054306) do
     t.string   "image_uid"
     t.string   "image_ext"
   end
+
+  create_table "images_portfolio_entries", :id => false, :force => true do |t|
+    t.integer "image_id"
+    t.integer "portfolio_entry_id"
+    t.integer "position"
+  end
+
+  add_index "images_portfolio_entries", ["image_id", "portfolio_entry_id"], :name => "composite_key_index"
 
   create_table "inquiries", :force => true do |t|
     t.string   "name"
@@ -178,6 +210,23 @@ ActiveRecord::Schema.define(:version => 20110703054306) do
   add_index "pages", ["lft"], :name => "index_pages_on_lft"
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
+
+  create_table "portfolio_entries", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.integer  "title_image_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "portfolio_entries", ["id"], :name => "index_portfolio_entries_on_id"
+  add_index "portfolio_entries", ["lft"], :name => "index_portfolio_entries_on_lft"
+  add_index "portfolio_entries", ["parent_id"], :name => "index_portfolio_entries_on_parent_id"
+  add_index "portfolio_entries", ["rgt"], :name => "index_portfolio_entries_on_rgt"
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"
