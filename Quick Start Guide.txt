@@ -1,0 +1,7 @@
+1. Execute the command "git clone git@github.com:nate-untiedt/gosummerproject.git <destination folder name>", where <destination folder name> is the location you wish to copy the project to.
+2. In destination folder
+2a. Execute command "bundle install".  This will install all of the necessary gems for the program to function properly.
+2b. Execute command "rake db:migrate".  This will create all of the necessary database tables and entries.
+2c. Execute command "rails server" to start a local version of the application.
+3. Open a web browser and go to "localhost:3000".
+4. Enjoy!
