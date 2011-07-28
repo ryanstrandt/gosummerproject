@@ -78,3 +78,6 @@ capybara-*html
 .rvmrc
 .rvmrc.*
 
+database.yml
+deploy.rb
+vendor/ruby
