@@ -136,8 +136,6 @@ GEM
       filters_spam (~> 0.2)
     refinerycms-news (1.2.0)
       refinerycms-core (~> 1.0.0)
-    refinerycms-page-images (1.0.4)
-      refinerycms-pages (>= 0.9.9.1)
     refinerycms-pages (1.0.3)
       awesome_nested_set (~> 2.0)
       friendly_id_globalize3 (~> 3.2.1)
@@ -182,7 +180,6 @@ DEPENDENCIES
   refinerycms-inquiries (~> 1.0)
   refinerycms-messages (~> 0.9.7)!
   refinerycms-news (~> 1.2)
-  refinerycms-page-images (~> 1.0)
   refinerycms-portfolio (~> 0.9.9)
   refinerycms-search (~> 0.9.8)
   sqlite3
