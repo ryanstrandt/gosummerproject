@@ -1,4 +1,96 @@
-/*
-  Override default refinery application CSS below.
-  Formatting applies to all frontend.
-*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0 auto; padding: 0; border: none; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+html { height: 100%; }
+
+h2 { font-size: 24px; }
+
+body { background:url('/images/noise.png') #fff; text-align: center; color: #000;  }
+
+p, form { font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; color: #000; }
+
+#wrapper { *position: relative; margin: 0 auto; width:100%; overflow:hidden; }
+
+section { text-align: left; position: relative; overflow: hidden; width: 100%; margin: 0 auto; padding: 150px 0; background: transparent url('/images/hr_top.png') no-repeat 0 0; _background: transparent none; _border-top: 1px solid #444; }
+
+.fabric { background:url('/images/noise.png'), url('/images/pattern.gif') 0 0 repeat; }
+.container { width:940px; }
+
+@font-face {
+    font-family: 'Rockwell';
+    src: url('/images/rockwell-webfont.eot');
+    src: url('/images/rockwell-webfont.eot?iefix') format('eot'),
+         url('/images/rockwell-webfont.woff') format('woff'),
+         url('/images/rockwell-webfont.ttf') format('truetype'),
+         url('/images/rockwell-webfont.svg#webfontua9tSpTi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ===========================================
+	NAVIGATION
+============================================== */
+#nav { top:345px; background:#FFF; width:100%; position: absolute; z-index: 999; -moz-box-shadow: 0px 4px 8px -4px #999;-webkit-box-shadow: 0px 4px 8px -4px #999;box-shadow: 0px 4px 8px -4px #999; overflow:visible;}
+#nav ul { height:85px; margin:auto; padding:0; width: 1000px; }
+#nav li { border-style:none; padding:0px; margin:10px; display: inline; }
+#nav img { vertical-align:top; margin-top:22px; border:0; outline: none; }
+#nav a { vertical-align:bottom; -webkit-transition: none !important; -moz-transition: none !important; transition: none !important; }
+#nav a:hover { padding-top: 45px; border: none; background:url('/images/dot.jpg') repeat-x; }
+#nav a.selected { border: none; background:url('/images/dot.jpg') repeat-x; padding-top: 45px; -webkit-transition: none !important; -moz-transition: none !important; transition: none !important; }
+
+#nav.active ul { *position: absolute !important; *top: 345px !important; }
+
+#nav.active { *position: absolute !important; *top: 345px !important; }
+
+.circle {  border: 0; background:url('/images/circle.png'); height:168px; width:132px; }
+
+
+/* ===========================================
+	HOME
+============================================== */
+#home { padding:0; width:100%; height: 430px; text-align: center; background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(255,255,255,1)), to(rgba(255,255,255,0))); background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));*/}
+
+#logo { margin-top: 80px; width: 100%; height: 170px; }
+#logo a { border: 0; margin: 0 auto; width: 266px; height: 170px; display: block; background: transparent url('/images/sp12.png') no-repeat ;  }
+
+
+/* ===========================================
+	PROJECTS
+============================================== */
+#projects { font-family: 'Rockwell';color: #eee; height: auto; overflow: visible; margin-top:0px; padding-top:150px;}
+
+
+/* ===========================================
+	DECISION
+============================================== */
+#decision { font-family: 'Rockwell'; padding-top:150px; }
+
+
+/* ===========================================
+	CALENDAR
+============================================== */
+#calendar { font-family: 'Rockwell';color: #eee; padding-top:150px; }
+
+
+/* ===========================================
+	DOWNLOADS
+============================================== */
+#downloads { font-family: 'Rockwell';padding-top:150px; }
+
+
+/* ===========================================
+	CONNECT
+============================================== */
+#connect { font-family: 'Rockwell';color: #eee; padding-top:150px; }
+
+
+/* ===========================================
+	CONTEST
+============================================== */
+#contest { font-family: 'Rockwell';padding-top:150px; }
+
+
+/* ===========================================
+	FOOTER
+============================================== */
+#footer {font-family: 'Rockwell'; font-size:15px; background-image: none; text-align: center; width: 1000px; color: #eee; padding: 20px; margin: 0 auto; }

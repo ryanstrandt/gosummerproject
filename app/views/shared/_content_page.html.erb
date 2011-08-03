@@ -5,7 +5,7 @@
   # if 'sections' is passed in as a local_assigns, all of this is ignored.
   if local_assigns[:sections].blank?
     # always have a title
-    sections = [{:yield => :body_content_title, :fallback => page_title, :title => true}]
+    sections = [{:yield => :html, :fallback => page_title, :title => true}]
 
     # append sections from this page.
     @page.parts.inject(sections) do |s, part|

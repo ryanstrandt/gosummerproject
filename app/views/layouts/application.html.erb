@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2012 Cru Summer Projects</title>
+  <title><%= RefinerySetting.find_or_set(:Site_Name, "2012 Cru Summer Projects") %> </title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
-
+<body> 
+<div class='' id='wrapper' role='main'> 
+<section id='home' role='banner'> 
+<h2 id='logo'> 
+<a href='#home'></a> 
+</h2> 
+</section>
+<div id='body_content'> 
 <%= yield %>
+</div>
+</div> 
+<nav id='nav' role='navigation'> 
+<ul class=''> 
+<li>
+<% if  current_page?(root_url) %>
+<%= link_to image_tag("projects.png"), "#projects" %>
+</li> 
+<li>
+<%= link_to image_tag("decision.png"), "#decision" %>
+</li> 
+<li>
+<%= link_to image_tag("calendar.png"), "#calendar" %>
+</li> 
+<li>
+<a href='#apply'><img class="circle" style="margin-top:-42px;"src="images/logo.png"/></a> 
+</li> 
+<li>
+<%= link_to image_tag("downloads.png"), "#downloads" %>
+</li> 
+<li>
+<%= link_to image_tag("connect.png"), "#connect" %>
+</li> 
+<li>
+<%= link_to image_tag("contest.png"), "#contest" %>
+</li>
+<% else  %>
+<%= link_to image_tag("projects.png"), root_url + "#projects" %>
+</li> 
+<li>
+<%= link_to image_tag("decision.png"), root_url + "#decision" %>
+</li> 
+<li>
+<%= link_to image_tag("calendar.png"), root_url + "#calendar" %>
+</li> 
+<li>
+<a href='#apply'><img class="circle" style="margin-top:-42px;"src="images/logo.png"/></a> 
+</li> 
+<li>
+<%= link_to image_tag("downloads.png"), root_url + "#downloads" %>
+</li> 
+<li>
+<%= link_to image_tag("connect.png"), root_url + "#connect" %>
+</li> 
+<li>
+<%= link_to image_tag("contest.png"), root_url + "#contest" %>
+</li>
+<% end  %>
+ 
+</ul> 
+</nav> 
 
-</body>
+</body> 
+<div class="fabric" style=" height:60px; padding-top:0;">
+<section id='footer' role='contentinfo'> 
+<span> 
+&copy; <%= RefinerySetting.find_or_set(:Copyright, "2012 Cru") %> | <%= RefinerySetting.find_or_set(:Address, "Summer Projects Lake Hart Drive, Dept 2500 Orlando, FL 32832") %> | <%= RefinerySetting.find_or_set(:Phone_Number, "1.800.690.0911 ") %> </a>
+</span> 
+<br> 
+</section> 
+</div>
 </html>
