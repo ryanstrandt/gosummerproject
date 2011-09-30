@@ -23,48 +23,38 @@
 <% if  current_page?(root_url) %>
 <%= link_to image_tag("nav/explore.png"), "#projects" %>
 </li> 
-<li>
-<%= link_to image_tag("nav/decision.png"), "#decision" %>
-</li> 
-<li>
-<%= link_to image_tag("nav/calendar.png"), "#calendar" %>
-</li> 
-<li>
-<a href='#apply'><img class="circle" style="margin-top:-42px;"src="/images/nav/logo.png"/></a> 
-</li> 
-<li>
-<%= link_to image_tag("nav/downloads.png"), "#downloads" %>
-</li> 
-<li>
-<%= link_to image_tag("nav/connect.png"), "#connect" %>
-</li> 
-<li>
-<%= link_to image_tag("nav/stories.png"), "#stories" %>
-</li>
+<li><%= link_to image_tag("nav/decision.png"), "#decision" %></li> 
+<li><%= link_to image_tag("nav/calendar.png"), "#calendar" %></li> 
+<li><a href='#apply'><img class="circle" style="margin-top:-42px;"src="/images/nav/logo.png"/></a></li> 
+<li><%= link_to image_tag("nav/downloads.png"), "#downloads" %></li> 
+<li><%= link_to image_tag("nav/connect.png"), "#connect" %></li> 
+<li><%= link_to image_tag("nav/stories.png"), "#stories" %></li>
 <% else  %>
 <%= link_to image_tag("nav/explore.png"), root_url + "#projects" %>
 </li> 
-<li>
-<%= link_to image_tag("nav/decision.png"), root_url + "#decision" %>
-</li> 
-<li>
-<%= link_to image_tag("nav/calendar.png"), root_url + "#calendar" %>
-</li> 
-<li>
-<a href='#apply'><img class="circle" style="margin-top:-42px;"src="/images/nav/logo.png"/></a> 
-</li> 
-<li>
-<%= link_to image_tag("nav/downloads.png"), root_url + "#downloads" %>
-</li> 
-<li>
-<%= link_to image_tag("nav/connect.png"), root_url + "#connect" %>
-</li> 
-<li>
-<%= link_to image_tag("nav/stories.png"), root_url + "#stories" %>
-</li>
+<li><%= link_to image_tag("nav/decision.png"), root_url + "#decision" %></li> 
+<li><%= link_to image_tag("nav/calendar.png"), root_url + "#calendar" %></li> 
+<li><a href='#apply'><img class="circle" style="margin-top:-42px;"src="/images/nav/logo.png"/></a></li> 
+<li><%= link_to image_tag("nav/downloads.png"), root_url + "#downloads" %></li> 
+<li><%= link_to image_tag("nav/connect.png"), root_url + "#connect" %></li> 
+<li><%= link_to image_tag("nav/stories.png"), root_url + "#stories" %></li>
 <% end  %>
- 
 </ul> 
+<div id="stitch">
+<ul class='landing'> 
+<li><a href='http://gosummerproject.com/whatissp'><img src="images/nav/whatissp.png" /></a></li> 
+<li><a href='http://gosummerproject.com/projects'><img src="images/nav/projects.png" /></a></li> 
+<li><a href='http://gosummerproject.com/guide'><img src="images/nav/guide.png" /></a></li> 
+<li><a href='http://gosummerproject.com/status'><img src="images/nav/status.png" /></a></li> 
+<li><a href='http://gosummerproject.com/accepted'><img src="images/nav/accepted.png" /></a></li> 
+<li><a href='http://gosummerproject.com/aboutcru'><img src="images/nav/aboutcru.png" style="margin-left:155px;"/></a></li> 
+<li><a href='http://gosummerproject.com/parents'><img src="images/nav/parents.png" /></a></li> 
+<li><a href='http://gosummerproject.com/faq'><img src="images/nav/faq.png" /></a></li> 
+<li><a href='http://gosummerproject.com/contact'><img src="images/nav/contact.png" /></a></li> 
+<li><div id="fb-root" style="float:left;"></div><fb:like href="https://www.facebook.com/summerproject" send="false" layout="button_count" style="margin-top:7px;" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like></li> 
+</ul> 
+</div>
+
 </nav> 
 <section class="" style="padding:0;"> 
 	<div id="ribbon" style="margin:0;"><div class="container" title="Back to Top"><a href="#home" class="top"><h1>&lsaquo;&lsaquo;</h1></a></div></div>
