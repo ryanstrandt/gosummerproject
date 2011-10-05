@@ -3,14 +3,20 @@
 <head>
   <title><%= RefinerySetting.find_or_set(:Site_Name, "2012 Cru Summer Projects") %> </title>
   <%= stylesheet_link_tag :all %>
-	<%= javascript_include_tag :defaults, 'jquery.min.js', 'jquery.stickyPanel', 'jquery.waypoints', 'slides.min.jquery', :cache => true %>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<%= javascript_include_tag :defaults, 'jquery.min.js', 'jquery.stickyPanel', 'jquery.waypoints', 'slides.min.jquery', 'jquery.polaroid', :cache => true %>
+	<script src="http://connect.facebook.net/en_US/all.js#appId=169422786455893&amp;xfbml=1"></script>
   <%= csrf_meta_tag %>
 </head>
 <body> 
 <div class='' id='wrapper' role='main'> 
 	<section id='home' role='banner'> 
-		<h2 id='logo'> 
-			<a href='#home'></a> 
+		<h2 id='logo'>
+			<% if current_page?(root_url) %>
+				<%= link_to '', "#home" %>
+			<% else %>
+				<%= link_to '', root_url + "#home" %>
+			<% end %>
 		</h2> 
 	</section>
 	<div id='body_content'> 
@@ -24,7 +30,7 @@
 <%= link_to image_tag("nav/explore.png"), "#projects" %>
 </li> 
 <li><%= link_to image_tag("nav/decision.png"), "#decision" %></li> 
-<li><%= link_to image_tag("nav/calendar.png"), "#calendar" %></li> 
+<li><%= link_to image_tag("nav/calendar.png"), "#calendar" %></li>
 <li><a href='#apply'><img class="circle" style="margin-top:-42px;"src="/images/nav/logo.png"/></a></li> 
 <li><%= link_to image_tag("nav/downloads.png"), "#downloads" %></li> 
 <li><%= link_to image_tag("nav/connect.png"), "#connect" %></li> 
@@ -42,15 +48,15 @@
 </ul> 
 <div id="stitch">
 <ul class='landing'> 
-<li><a href='http://gosummerproject.com/whatissp'><img src="images/nav/whatissp.png" /></a></li> 
-<li><a href='http://gosummerproject.com/projects'><img src="images/nav/projects.png" /></a></li> 
-<li><a href='http://gosummerproject.com/guide'><img src="images/nav/guide.png" /></a></li> 
-<li><a href='http://gosummerproject.com/status'><img src="images/nav/status.png" /></a></li> 
-<li><a href='http://gosummerproject.com/accepted'><img src="images/nav/accepted.png" /></a></li> 
-<li><a href='http://gosummerproject.com/aboutcru'><img src="images/nav/aboutcru.png" style="margin-left:155px;"/></a></li> 
-<li><a href='http://gosummerproject.com/parents'><img src="images/nav/parents.png" /></a></li> 
-<li><a href='http://gosummerproject.com/faq'><img src="images/nav/faq.png" /></a></li> 
-<li><a href='http://gosummerproject.com/contact'><img src="images/nav/contact.png" /></a></li> 
+<li><%= link_to image_tag("nav/whatissp.png"), page = Page.find('what-is-summer-project') %></li> 
+<li><%= link_to image_tag("nav/projects.png"), page = Page.find('projects') %></li> 
+<li><%= link_to image_tag("nav/guide.png"), page = Page.find('guide') %></li> 
+<li><%= link_to image_tag("nav/status.png"), '#status' %></li> 
+<li><%= link_to image_tag("nav/accepted.png"), page = Page.find('accepted') %></li> 
+<li style="margin-left:160px;"><%= link_to image_tag("nav/aboutcru.png"), page = Page.find('about-cru') %></li> 
+<li><%= link_to image_tag("nav/parents.png"), page = Page.find('parents') %></li> 
+<li><%= link_to image_tag("nav/faq.png"), page = Page.find('faq') %></li> 
+<li><%= link_to image_tag("nav/contact.png"), page = Page.find('contact') %></li> 
 <li><div id="fb-root" style="float:left;"></div><fb:like href="https://www.facebook.com/summerproject" send="false" layout="button_count" style="margin-top:7px;" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like></li> 
 </ul> 
 </div>

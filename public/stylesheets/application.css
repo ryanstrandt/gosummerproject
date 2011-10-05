@@ -31,9 +31,9 @@ section { text-align: left; position: relative; overflow: hidden; width: 100%; m
 #nav  ul {margin:auto; padding:0; width: 960px; }
 #nav .banner { height:85px; }
 #stitch { height:40px; background:url('/images/nav/stitch.jpg') repeat-x; }
-#letsgo { background:url('/images/nav/logo.png') no-repeat; margin-top:-42px; width:133px; height:168; }
-#letsgo:hover { background:url('/images/nav/appy.png') no-repeat; }
-.circle {  border: 0; background:url('/images/nav/circle.png'); height:168px; width:132px; }
+#nav .banner #letsgo { background:url('/images/nav/logo.png') no-repeat; margin-top:-42px; width:133px; height:168px; vertical-align:top; }
+#nav .banner #letsgo:hover { background:url('/images/nav/appy.png') no-repeat;}
+.circle {  border: 0; background:url('/images/nav/circle.png'); height:168px; margin-top:-42px; width:132px; }
 
 
 #nav li { border-style:none; padding:0px; margin:10px; display: inline;  }
@@ -56,10 +56,13 @@ section { text-align: left; position: relative; overflow: hidden; width: 100%; m
 	HOME
 ============================================== */
 #home { padding:0; height: 345px; text-align: center; background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(255,255,255,1)), to(rgba(255,255,255,0))); background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));*/}
-
 #logo { margin-top: 80px; width: 100%; height: 170px; }
 #logo a { border: 0; margin: 0 auto; width: 266px; height: 170px; display: block; background: transparent url('/images/sp12.png') no-repeat ;  }
-
+#polaroid {height:450px;}
+#polaroid .content {margin:0 auto;}
+.polaroid { width:368px; height:376px; background-image:url('/images/polaroid/polaroid-bg.png'); cursor:pointer; position:absolute; }
+.polaroid img { width:335px; height:275px; margin:25px 0 0 15px;}
+.polaroid p { text-align:center; font-family:Georgia,serif; font-size:20px; color:#2E2E2E; margin-top:15px; }
 
 /* ===========================================
 	PROJECTS
@@ -75,7 +78,7 @@ section { text-align: left; position: relative; overflow: hidden; width: 100%; m
 #questions { background:url('/images/questions.png') no-repeat; width:400px; height:123px;}
 #faq { background:url('/images/faq.png') no-repeat; width:180px; height:100px; margin:0;}
 #guide { background:url('/images/guide.png') no-repeat; width:178px; height:100px; float:right; margin-top:-100px;}
-#text_dots {background:url('/images/text-dots.png') no-repeat; width:425px; height:7px; margin:20px 0;}
+.text_dots {background:url('/images/text-dots.png') no-repeat; width:425px; height:7px; margin:20px 0;}
 #text1 { background:url('/images/text1.png') no-repeat; width:425px; height:191px;}
 #text1:hover { background:url('/images/text1over.png') no-repeat; -webkit-transition: background 1s linear;}
 #text2 { background:url('/images/text2.png') no-repeat; width:425px; height:109px;}
@@ -149,7 +152,7 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 #ribbon { background:url("/images/ribbon.jpg") bottom left repeat-x; width:100%; height:84px; margin: 0 0 70px 0; -moz-box-shadow:  0px 4px 4px -4px #666;-webkit-box-shadow:  0px 4px 4px -4px #666;box-shadow: 0px 4px 4px -4px #666; }
 #ribbon a {color:#ccc; width:84px; height:50px; float:right; }
 
-#homestitch { background:url("/images/homestitch.png") bottom left repeat-x, url('/images/pattern.gif') 0 0 repeat; width:100%; height:84px; margin: 0 0 70px 0; padding:0; -moz-box-shadow:  0px 5px 4px -4px #666;-webkit-box-shadow:  0px 5px 8px -4px #666;box-shadow: 0px 5px 8px -4px #666; }
+#homestitch { background:url("/images/homestitch.png") bottom left repeat-x, url('/images/pattern.gif') 0 0 repeat; width:100%; height:10px; margin: 0 0 70px 0; padding:0; -moz-box-shadow:  0px 5px 4px -4px #666;-webkit-box-shadow:  0px 5px 8px -4px #666;box-shadow: 0px 5px 8px -4px #666; }
 
 .top h1 {font-family: 'MuseoSans-300'; font-size:80px; letter-spacing:-12px;  margin:15px 0 0 0; color:#dcdcdc; text-shadow: #fff 1px -1px 0; text-align:left; -webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);
 /* for ie */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);}
