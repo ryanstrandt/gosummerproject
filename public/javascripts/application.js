@@ -20,7 +20,7 @@ $(function(){
 
 $(function(){
 	$('#faqAccordion h2').click(function() {
-		$(this).next().toggle('slow');
+		$(this).next().toggle();
 		return false;
 	}).next().hide();
 });

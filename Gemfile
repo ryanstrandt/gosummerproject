@@ -46,8 +46,6 @@ end
 # END REFINERY CMS ============================================================
 
 # USER DEFINED
-
-
 # Specify additional Refinery CMS Engines here (all optional):
  gem 'refinerycms-inquiries',    '~> 1.0'
  gem "refinerycms-news",         '~> 1.2'
@@ -61,3 +59,4 @@ gem 'refinerycms-portfolio', '~> 0.9.9'
 gem "refinerycms-messages", '~> 0.9.7', :git => 'git://github.com/parndt/refinerycms-messages.git'
 gem 'refinerycms-calendar', '~>1.0'
 gem 'refinerycms-search', '~> 0.9.8'
+gem 'refinerycms-page-images', '~> 1.0'
