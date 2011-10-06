@@ -17,3 +17,10 @@ $(function(){
 		start: startSlide,
 	});
 });
+
+$(function(){
+	$('#faqAccordion h2').click(function() {
+		$(this).next().toggle('slow');
+		return false;
+	}).next().hide();
+});

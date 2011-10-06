@@ -1,1 +1,13 @@
-<%= raw @page.content_for(:body) %>
+<section id="page" class="fabric"> 
+	<div id="pageBox">
+		<div class="container">
+			<div id="sideBar">
+				<%= raw @page.content_for(:side_body) %>
+			</div>
+			<div id="pageContent">
+				<%= raw @page.content_for(:body) %>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</section> 

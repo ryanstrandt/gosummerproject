@@ -14,10 +14,11 @@ a:link {color:#666;}      /* unvisited link */
 a:visited {color:#666;}  /* visited link */
 a:hover {color:#666;}  /* mouse over link */
 p, form { font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; color: #666; }
+p {margin-top:1.5em;}
 
 #wrapper { *position: relative; margin: 0 auto; width:100%; overflow:hidden; }
 
-section { text-align: left; position: relative; overflow: hidden; width: 100%; margin: 0 auto; padding: 0 0 70px 0; }
+section { text-align: left; overflow:hidden; height:100%; width: 100%; margin: 0 auto; padding: 0 0 70px 0; }
 
 .fabric { background:url('/images/pattern.gif') 0 0 repeat; color: #fff;}
 .fabric h1 { color: #fff; text-shadow: #ccc -1px -1px 2px;}
@@ -58,8 +59,12 @@ section { text-align: left; position: relative; overflow: hidden; width: 100%; m
 #home { padding:0; height: 345px; text-align: center; background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(255,255,255,1)), to(rgba(255,255,255,0))); background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));*/}
 #logo { margin-top: 80px; width: 100%; height: 170px; }
 #logo a { border: 0; margin: 0 auto; width: 266px; height: 170px; display: block; background: transparent url('/images/sp12.png') no-repeat ;  }
+
+/* ===========================================
+  POLAROIDS
+============================================== */
 #polaroid {height:450px;}
-#polaroid .content {margin:0 auto;}
+#polaroidcontainer { height:380px; margin-top:120px; width:1100px; overflow:hidden;}
 .polaroid { width:368px; height:376px; background-image:url('/images/polaroid/polaroid-bg.png'); cursor:pointer; position:absolute; }
 .polaroid img { width:335px; height:275px; margin:25px 0 0 15px;}
 .polaroid p { text-align:center; font-family:Georgia,serif; font-size:20px; color:#2E2E2E; margin-top:15px; }
@@ -67,9 +72,10 @@ section { text-align: left; position: relative; overflow: hidden; width: 100%; m
 /* ===========================================
 	PROJECTS
 ============================================== */
-#cols {width:250px; float:left; text-align:center; margin:60px auto 0px auto; padding:0px;}
-#cols h2 { font-family: 'MuseoSans-500'; font-size:28px; text-transform:uppercase; padding:10px 0 0;} 
-#cols h4 { font-size:16px; }
+#projects .container {margin-top:150px;}
+.cols {width:250px; float:left; text-align:center; margin:60px auto 0px auto; padding:0px;}
+.cols h2 { font-family: 'MuseoSans-500'; font-size:28px; text-transform:uppercase; padding:10px 0 0;} 
+.cols h4 { font-size:16px; }
 #slidetag {background:url('/images/tag.png') no-repeat; width:246px; height:63px; margin:10px 0 8px; font-size:20px; text-decoration:none; color:#eee; z-index:1;}
 
 /* ===========================================
@@ -102,7 +108,7 @@ section { text-align: left; position: relative; overflow: hidden; width: 100%; m
 #facebook { background:url('/images/facebook.png') no-repeat; height:69px;}
 #google { background:url('/images/google.png') no-repeat; height:69px;}
 #relay { background:url('/images/relay.png') no-repeat; height:69px;}
-#services { width:69px; float:left; margin:10px 20px; text-align:center;}
+.services { width:69px; float:left; margin:10px 20px; text-align:center;}
 #login {background:#AAE2F3; height:120px; margin-top:0; -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
 
 input { height: 30px; margin:5px 15px; padding-left:5px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; font-family: sans-serif; font-size: 21px; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;}
@@ -116,29 +122,29 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 /* ===========================================
 	DOWNLOADS
 ============================================== */
-#col3 {width:250px; float:left; text-align:center; margin:50px auto 0 auto; padding:0 25px;}
+.col3 {width:250px; float:left; text-align:center; margin:50px auto 0 auto; padding:0 25px;}
 #camera {background:url('/images/camera.png') no-repeat; width:192px; height:192px;  }
 #video {background:url('/images/video.png') no-repeat; width:192px; height:192px; }
 #graphics {background:url('/images/graphics.png') no-repeat; width:192px; height:192px; }
-#downloadtag {background:url('/images/tag.png') no-repeat; width:246px; height:63px; padding:7px 0 5px 0; margin: 15px 0 0 0;font-size:20px; text-decoration:none; color:#fff; }
+.downloadtag {background:url('/images/tag.png') no-repeat; width:246px; height:63px; padding:7px 0 5px 0; margin: 15px 0 0 0;font-size:20px; text-decoration:none; color:#fff; }
 
 
 /* ===========================================
 	CONNECT
 ============================================== */
-#col2 {width:400px; float:left; text-align:center; margin:30px auto 0 auto; padding:0 25px;}
-#col2 h2 { font-size:18px;}
-#box {background:#AAE2F3; color:#fff; padding:10px 20px; -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;text-shadow: #ccc -1px -1px 2px; -moz-box-shadow: #ccc 1px 1px 2px;-webkit-box-shadow: #ccc 1px 1px 2px;box-shadow: #ccc 1px 1px 2px;}
-#socialbox {background:#fff; width: 350px; height:400px; padding:3px 0; margin-top:15px; -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; -moz-box-shadow: #ccc 1px 1px 2px; -webkit-box-shadow: #ccc 1px 1px 2px;box-shadow: #ccc 1px 1px 2px;}
-#share { text-align:right; padding:10px 25px;}
+.col2 {width:400px; float:left; text-align:center; margin:30px auto 0 auto; padding:0 25px;}
+.col2 h2 { font-size:18px;}
+.box {background:#AAE2F3; color:#fff; padding:10px 20px; -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;text-shadow: #ccc -1px -1px 2px; -moz-box-shadow: #ccc 1px 1px 2px;-webkit-box-shadow: #ccc 1px 1px 2px;box-shadow: #ccc 1px 1px 2px;}
+.socialbox {background:#fff; width: 350px; height:400px; padding:3px 0; margin-top:15px; -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; -moz-box-shadow: #ccc 1px 1px 2px; -webkit-box-shadow: #ccc 1px 1px 2px;box-shadow: #ccc 1px 1px 2px;}
+.share { text-align:right; padding:10px 25px;}
 
 
 /* ===========================================
 	STORIES
 ============================================== */
-#col {width:250px; float:left; text-align:center; margin:15px auto 0px auto; padding:0 8px;}
-#col h3 { font-size:14px;} #col2 h4 { font-size:16px; padding-top:5px;}
-#storytag {background:url('/images/tag.png') no-repeat; width:246px; height:63px; padding:8px 0 0 0; margin: -20px 0 0 0; font-size:20px; text-decoration:none; color:#eee; z-index:1;}
+.col {width:250px; float:left; text-align:center; margin:15px auto 0px auto; padding:0 8px;}
+.col h3 { font-size:14px;} .col h4 { font-size:12px; padding-top:5px;}
+.storytag {background:url('/images/tag.png') no-repeat; width:246px; height:63px; padding:8px 0 0 0; margin: -20px 0 0 0; font-size:20px; text-decoration:none; color:#eee; z-index:1;}
 
 /* ===========================================
 	FOOTER
@@ -146,17 +152,38 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 #footer {font-family: 'Rockwell'; font-size:15px; background-image: none; text-align: center; width: 1000px; padding: 20px; margin: 0 auto; }
 
 /* ===========================================
+	PAGES
+============================================== */
+#pageBox {
+	width:900px;
+	-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;
+  -moz-box-shadow: inset 0 0 1px 3px #CCC;
+	-webkit-box-shadow: inset 0 0 1px 3px #CCC;
+	box-shadow: inset 0 0 1px 3px #CCC;
+	background:url('/images/stone.png') #ECECEC;
+	margin-top:150px;
+}
+
+#page .container { margin-top:20px; padding-bottom:40px; width:850px; }
+#page #pageContent { float:right; margin:50px 20px 0 20px; width:560px; }
+#page #sideBar { border-right: 2px dotted #ccc; float:left; margin:100px 0 0 10px; padding-right:25px; width:200px; }
+#page h1 {color:#ec1d3b; text-align:left;}
+#page h2 {color:#00b2af;}
+#page h3 {color:#00b2af; margin-top:1em;}
+
+/* ===========================================
 	MISC
 ============================================== */
 
-#ribbon { background:url("/images/ribbon.jpg") bottom left repeat-x; width:100%; height:84px; margin: 0 0 70px 0; -moz-box-shadow:  0px 4px 4px -4px #666;-webkit-box-shadow:  0px 4px 4px -4px #666;box-shadow: 0px 4px 4px -4px #666; }
-#ribbon a {color:#ccc; width:84px; height:50px; float:right; }
+.ribbon { background:url("/images/ribbon.jpg") bottom left repeat-x; width:100%; height:84px; margin: 0 0 70px 0; -moz-box-shadow:  0px 4px 4px -4px #666;-webkit-box-shadow:  0px 4px 4px -4px #666;box-shadow: 0px 4px 4px -4px #666; }
+.ribbon a {color:#ccc; width:84px; height:50px; float:right; }
 
-#homestitch { background:url("/images/homestitch.png") bottom left repeat-x, url('/images/pattern.gif') 0 0 repeat; width:100%; height:10px; margin: 0 0 70px 0; padding:0; -moz-box-shadow:  0px 5px 4px -4px #666;-webkit-box-shadow:  0px 5px 8px -4px #666;box-shadow: 0px 5px 8px -4px #666; }
+#homestitch { background:url("/images/homestitch.png") bottom left repeat-x, url('/images/pattern.gif') 0 0 repeat; width:100%; height:10px; margin: 0 0 0px 0; padding:0; -moz-box-shadow:  0px 5px 4px -4px #666;-webkit-box-shadow:  0px 5px 8px -4px #666;box-shadow: 0px 5px 8px -4px #666; }
 
 .top h1 {font-family: 'MuseoSans-300'; font-size:80px; letter-spacing:-12px;  margin:15px 0 0 0; color:#dcdcdc; text-shadow: #fff 1px -1px 0; text-align:left; -webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);
 /* for ie */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);}
 .top h1:hover {color:#FFDE7C; text-shadow: #999 1px -1px 2px;}
+.clear {clear:both;}
 
 /* ===========================================
 	SLIDESHOW

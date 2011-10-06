@@ -1,12 +1,19 @@
-
 /*
 * Author:      Marco Kuiper (http://www.marcofolio.net/)
 */
 google.load("jqueryui", "1.7.0");
 google.setOnLoadCallback(function()
 {
+	// NOTE: JUST FOR DEMO, A TOGGLE CLASS HAS BEEN ADDED
+	// TO SHOW THE BOUNDARIES OF THE DIV
+	// You can safely remove this function
+	$("#toggle").click(function () {
+		$("#polaroidcontainer").toggleClass("redborder");
+	});
+	
 	// When everything has loaded, place all polaroids on a random position	
-	$(".polaroid").each(function (i) {
+	$(".polaroid").each(function () {
+
 		var tempVal = Math.round(Math.random());
 		if(tempVal == 1) {
 			var rotDegrees = randomXToY(330, 360); // rotate left
@@ -14,18 +21,16 @@ google.setOnLoadCallback(function()
 			var rotDegrees = randomXToY(0, 30); // rotate right
 		}
 		
-		// Internet Explorer doesn't have the "window.innerWidth" and "window.innerHeight" properties
-		if(window.innerWidth == undefined) { 
-			var wiw = 900;
-			var wih = 450;
-		} else {
-			var wiw = window.innerWidth;
-			var wih = window.innerHeight;	
-		}
+		var position = $(this).parent().offset();
+		var wiw = $(this).parent().width();
+		var wih = $(this).parent().height();
 		
-		var cssObj = { 'left' : Math.random()*(wiw-400),
-			'top' : Math.random()*(wih-400),
+		var leftpos = Math.random()*(wiw - $(this).width()) + position.left;
+		var toppos = Math.random()*(wih - position.top) + position.top;
+		var cssObj = { 'left' : leftpos,
+			'top' : toppos,
 			'-webkit-transform' : 'rotate('+ rotDegrees +'deg)',  // safari only
+			'-moz-transform' : 'rotate('+ rotDegrees +'deg)',  // firefox only
 			'tranform' : 'rotate('+ rotDegrees +'deg)' }; // added in case CSS3 is standard
 		$(this).css(cssObj);
 	});
@@ -43,6 +48,7 @@ google.setOnLoadCallback(function()
 			zindexnr++;
 			var cssObj = { 'z-index' : zindexnr,
 			'transform' : 'rotate(0deg)',	 // added in case CSS3 is standard
+			'-moz-transform' : 'rotate(0deg)',  // firefox only
 			'-webkit-transform' : 'rotate(0deg)' };  // safari only
 			$(this).css(cssObj);
 		}
@@ -50,14 +56,16 @@ google.setOnLoadCallback(function()
 	
 	// Make the polaroid draggable & display a shadow when dragging
 	$(".polaroid").draggable({
+		containment: 'parent',
 		cursor: 'crosshair',
 		start: function(event, ui) {
 			dragging = true;
 			zindexnr++;
-			var cssObj = { 'box-shadow' : '#888 5px 10px 10px', // added in case CSS3 is standard
-				'-webkit-box-shadow' : '#888 5px 10px 10px', // safari only
-				'margin-left' : '-10px',
-				'margin-top' : '-10px',
+			var cssObj = { 'box-shadow' : '#888 3px 4px 4px', // added in case CSS3 is standard
+				'-webkit-box-shadow' : '#888 3px 4px 4px', // safari only
+				'-moz-box-shadow' : '#888 3px 4px 4px', // firefox only
+				'padding-left' : '-4px',
+				'padding-top' : '-4px',
 				'z-index' : zindexnr };
 			$(this).css(cssObj);
 		},
@@ -70,8 +78,10 @@ google.setOnLoadCallback(function()
 			}
 			var cssObj = { 'box-shadow' : '', // added in case CSS3 is standard
 				'-webkit-box-shadow' : '', // safari only
+				'-moz-box-shadow' : '', // firefox only
 				'transform' : 'rotate('+ rotDegrees +'deg)', // added in case CSS3 is standard
 				'-webkit-transform' : 'rotate('+ rotDegrees +'deg)', // safari only
+				'-moz-transform' : 'rotate('+ rotDegrees +'deg)', // firefox only
 				'margin-left' : '0px',
 				'margin-top' : '0px' };
 			$(this).css(cssObj);
