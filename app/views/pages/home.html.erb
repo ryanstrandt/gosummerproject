@@ -1,25 +1,25 @@
 <section id='polaroid' class="fabric"> 
 	<div id="polaroidcontainer">
 		<div class="polaroid">
-			<img src="images/polaroid/Polaroid-1.jpg" alt="" />
+			<%= image_tag('polaroid/Polaroid-1.jpg') %>
 		</div>
 		<div class="polaroid">
-			<img src="images/polaroid/Polaroid-2.jpg" alt="" />
+			<%= image_tag('polaroid/Polaroid-2.jpg') %>
 		</div>
 		<div class="polaroid">
-			<img src="images/polaroid/Polaroid-3.jpg" alt="" />
+			<%= image_tag('polaroid/Polaroid-3.jpg') %>
 		</div>
 		<div class="polaroid">
-			<img src="images/polaroid/Polaroid-4.jpg" alt="" />
+			<%= image_tag('polaroid/Polaroid-4.jpg') %>
 		</div>
 		<div class="polaroid">
-			<img src="images/polaroid/Polaroid-5.jpg" alt="" />
+			<%= image_tag('polaroid/Polaroid-5.jpg') %>
 		</div>
 		<div class="polaroid">
-			<img src="images/polaroid/Polaroid-6.jpg" alt="" />
+			<%= image_tag('polaroid/Polaroid-6.jpg') %>
 		</div>
 		<div class="polaroid">
-			<img src="images/polaroid/Polaroid-7.jpg" alt="" />
+			<%= image_tag('polaroid/Polaroid-7.jpg') %>
 		</div>	
 	</div>
 </section> 
@@ -33,67 +33,71 @@
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by GEOGRAPHY</h1>
 						<div class='cols' style="margin:60px 50px 0 100px;">
-							<a href='#'><img src="images/slide/us.png"></a>
-							<a href='#'><h2>In the<br/>United States</h2></a>
+							<%= link_to image_tag('slide/us.png'), '#' %>
+							<%= link_to "#" do %>
+								<h2>In the<br/>United States</h2>
+							<% end %>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/international.png"></a>
-							<a href='#'><h2>The Rest<br/>of the world</h2></a>
+							<%= link_to image_tag('slide/international.png'), '#' %>
+							<%= link_to "#" do %>
+								<h2>The Rest<br/>of the world</h2>
+							<% end %>
 						</div>
 					</div>
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by their length</h1>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/1-2weeks.png"></a>
+							<%= link_to image_tag('slide/1-2weeks.png'), '#' %>
 							<a href='#'><h2>a little bit<br/>of time</h2></a>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/3-5weeks.png"></a>
+							<%= link_to image_tag('slide/3-5weeks.png'), '#' %>
 							<a href='#'><h2>about a<br/>month</h2></a>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/7-12weeks.png"></a>
+							<%= link_to image_tag('slide/7-12weeks.png'), '#' %>
 							<a href='#'><h2>the whole<br/>summer</h2></a>
 						</div>
 					</div>
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by their environment</h1>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/city.png"></a>
+							<%= link_to image_tag('slide/city.png'), '#' %>
 							<a href='#'><h2>In the City</h2></a>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/beach.png"></a>
+							<%= link_to image_tag('slide/beach.png'), '#' %>
 							<a href='#'><h2>On the Beach</h2></a>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/mountains.png"></a>
+							<%= link_to image_tag('slide/mountains.png'), '#' %>
 							<a href='#'><h2>Mountains</h2></a>
 						</div>
 					</div>
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by their options</h1>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/intern.png"></a>
+							<%= link_to image_tag('slide/intern.png'), '#' %>
 							<a href='#'><h2>Office<br/>Internship</h2></a>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/job.png"></a>
+							<%= link_to image_tag('slide/job.png'), '#' %>
 							<a href='#'><h2>You can<br/>get a job</h2></a>
 							<h3></h3>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/greek.png"></a>
+							<%= link_to image_tag('slide/greek.png'), '#' %>
 							<a href='#'><h2>Work with<br/>Greek Students</h2></a>
 						</div>
 					</div>
 					<div class="slide">
 						<h1>CHECK OUT ALL THE OTHER<br/>SUMMER PROJECTS</h1>
 						<div class='cols' style=" width:300px; margin-right:45px;">
-							<a href='#'><img src="images/slide/ethnic.png"></a>
+							<%= link_to image_tag('slide/ethnic.png'), '#' %>
 						</div>
 						<div class='cols'>
-							<a href='#'><img src="images/slide/opportunities.png"></a>
+							<%= link_to image_tag('slide/opportunities.png'), '#' %>
 						</div>
 					</div>
 				</div>
@@ -112,10 +116,10 @@
 			<div class='col2'  style="text-align:left; margin-top:60px;">
 				<h2 style="padding:0 20px;">Making the Decision</h2>
 				<h4 style="padding:10px 20px 0;">God has some exciting plans for developing your heart this summer. We want to help you in processing how the Lord may be leading you to serve. Consider these questions, get a guide book and ask God to help you understand His call on your life for the summer ahead.</h4>
-				<a href="/guide"><h2 style="font-size:18px; color:#EC173F;padding:0 20px 35px;">Click here to learn more.</h2></a>
+				<h2 style="font-size:18px; color:#EC173F;padding:0 20px 35px;"><%= link_to "Click here to learn more.", page = Page.find('guide') %></h2>
 				<div id="questions"></div>
 				<div class="box" style="margin-top:25px; padding:19px; background:#fff;">
-					<a href="/faq"><h2 id="faq"></h2></a><a href="/guide"><h2 id="guide"></h2></a></div>
+					<%= link_to page = Page.find('faq') do %><h2 id="faq"></h2><% end %><%= link_to page = Page.find('guide') do %><h2 id="guide"></h2><% end %></div>
 				</div>
 			</div>
 			<div class='col2' style="width:425px; margin-left:50px;padding:0;">
@@ -144,13 +148,13 @@
 			<h2 style="color:#EC173F; font-family:'MuseoSans-700';margin:0 0 5px 15px;">MY APPLICATION STATUS</h2>
 			<h3 style="margin-left:15px;">Sign in through one of these services:</h3>
 			<div style="margin-left:15px;">
-				<div class="services"><a><h2 id="facebook"></h2></a><h4 style="margin-top:3px;">Facebook</h4></div>
-				<div class="services"><a><h2 id="google"></h2></a><h4 style="margin-top:3px;">Google</h4></div>
-				<div class="services"><a><h2 id="relay"></h2></a><h4 style="margin-top:3px;">Relay</h4></div>
+				<div class="services"><h2 id="facebook"></h2><h4 style="margin-top:3px;">Facebook</h4></div>
+				<div class="services"><h2 id="google"></h2><h4 style="margin-top:3px;">Google</h4></div>
+				<div class="services"><h2 id="relay"></h2><h4 style="margin-top:3px;">Relay</h4></div>
 			</div>
 			<h3 style="margin: 115px 0 5px 15px; ">Don't use these services?</h3>
 			<div id="login">
-				<h4 style="font-size:18px; margin-left:15px; padding-top:10px;">YOU CAN SIGN IN OR <a href="">SIGN UP</a> HERE</h4>
+				<h4 style="font-size:18px; margin-left:15px; padding-top:10px;">YOU CAN SIGN IN OR <%= link_to "SIGN UP HERE", "#" %></h4>
 				<div id="contact_form">
 					<fieldset>
 						<input type="text" id="name" name="name" placeholder="USERNAME" />
@@ -169,18 +173,24 @@
 		<h1>SEE, HEAR, &amp; SHARE WHAT'S BEEN GOING ON</h1>
 		<div style="width:900px; margin:auto;">
 			<div class='col3'>
-				<a href='/photos'><h2 id='camera'></h2></a>
-				<a href='/photos'><h2 class='downloadtag'>VIEW SOME<br />PHOTO ALBUMS</h2></a>
+				<%= link_to page = Page.find('photos') do %>
+					<h2 id='camera'></h2>
+					<h2 class='downloadtag'>VIEW SOME<br />PHOTO ALBUMS</h2>
+				<% end %>
 				<h3>These photographs are from 2011's Summer Projects around the world by real students recording their project experience – from new friends, to local culture, to a day at work.</h3>
 			</div>
 			<div class='col3'>
-				<a href='/video'><h2 id='video'></h2></a>
-				<a href='/video'><h2 class='downloadtag'>CHECK OUT<br />VIDEO &amp; AUDIO</h2></a>
+				<%= link_to page = Page.find('videos') do %>
+					<h2 id='video'></h2>
+					<h2 class='downloadtag'>CHECK OUT<br />VIDEO &amp; AUDIO</h2>
+				<% end %>
 				<h3>Browse through the promotional videos for Cru meetings, stories to share with friends, and spotlight videos. You can download all the videos on a desktop or mobile device.</h3>
 			</div>
 			<div class='col3'>
-				<a href='/graphics'><h2 id='graphics'></h2></a>
-				<a href='/graphics'><h2 class='downloadtag'>DOWNLOAD<br />2012 GRAPHICS</h2></a>
+				<%= link_to page = Page.find('graphics') do %>
+					<h2 id='graphics'></h2>
+					<h2 class='downloadtag'>DOWNLOAD<br />2012 GRAPHICS</h2>
+				<% end %>
 				<h3>Download a wallpaper, updated your Facebook profile image, and print posters to share with your friends on campus with a these Summer Project 2012 graphics.</h3>
 			</div>
 		</div>
@@ -234,35 +244,47 @@
 		<h1>HERE ARE THE STORIES OF OTHERS LIKE YOU</h1> 
 		<div style="width:800px; margin:auto;margin-top:15px;">
 			<div class='col'>
-				<a href='/stories/anna'><img src="images/stories/anna.png"></a>
-				<a href='/stories/anna'><div class='storytag'><h2>Anna</h2><h4>struggled with personal insecurities</h4></div></a>
+				<%= link_to image_tag('stories/anna.png'), page = Page.find('anna') %>
+				<%= link_to page = Page.find('anna') do %>
+					<div class='storytag'><h2>Anna</h2><h4>struggled with personal insecurities</h4></div>
+				<% end %>
 				<h3>"I still had to be aware of my multiple sclerosis, but I couldn't let that overpower the call the Lord had placed on my heart."</h3>
 			</div>
 			<div class='col'>
-				<a href='/stories/danny'><img src="images/stories/danny.png"></a>
-				<a href='/stories/danny'><div class='storytag'><h2>Danny</h2><h4>struggled with raising support</h4></div></a>
+				<%= link_to image_tag('stories/danny.png'), page = Page.find('danny') %>
+				<%= link_to page = Page.find('danny') do %>
+					<div class='storytag'><h2>Danny</h2><h4>struggled with raising support</h4></div>
+				<% end %>
 				<h3>"I had to raise support while studying abroad. So it was very strange and I felt disconnected from everything."</h3>
 			</div>
 			<div class='col'>
-				<a href='/stories/jordan'><img src="images/stories/jordan.png"></a>
-				<a href='/stories/jordan'><div class='storytag'><h2>Jordan</h2><h4>struggled with other<br>summer requirements</h4></div></a>
+				<%= link_to image_tag('stories/jordan.png'), page = Page.find('jordan') %>
+				<%= link_to page = Page.find('jordan') do %>				
+					<div class='storytag'><h2>Jordan</h2><h4>struggled with other<br>summer requirements</h4></div>
+				<% end %>
 				<h3>"Everything is possible through the Lord, but it's easy for those words to become empty when you feel defeated." </h3>
 			</div>
 		</div>
 		<div style="width:800px; margin:auto;">
 			<div class='col'>
-				<a href='/stories/jacob'><img src="images/stories/jacob.png"></a>
-				<a href='/stories/jacob'><div class='storytag'><h2>Jacob</h2><h4>struggled with other<br>summer requirements</h4></div></a>
+				<%= link_to image_tag('stories/jacob.png'), page = Page.find('jacob') %>
+				<%= link_to page = Page.find('jacob') do %>
+					<div class='storytag'><h2>Jacob</h2><h4>struggled with other<br>summer requirements</h4></div>
+				<% end %>
 				<h3>"I wanted to know that summer project wasn't just a good thing to do. I wanted to know that summer project was the God thing to do."</h3>
 			</div>
 			<div class='col'>
-				<a href='/stories/elizabeth'><img src="images/stories/elizabeth.png"></a>
-				<a href='/stories/elizabeth'><div class='storytag'><h2>Elizabeth</h2><h4>questioned God's call</h4></div></a>
+				<%= link_to image_tag('stories/elizabeth.png'), page = Page.find('elizabeth') %>
+				<%= link_to page = Page.find('elizabeth') do %>
+					<div class='storytag'><h2>Elizabeth</h2><h4>questioned God's call</h4></div>
+				<% end %>
 				<h3>"I just didn't think the Lord had called me to go out of the country and that he could use me to share his gospel."</h3>
 			</div>
 			<div class='col'>
-				<a href='/stories/brea'><img src="images/stories/brea.png"></a>
-				<a href='/stories/brea'><div class='storytag'><h2>Brea</h2><h4>needed her parents approval</h4></div></a>
+				<%= link_to image_tag('stories/brea.png'), page = Page.find('brea') %>
+				<%= link_to page = Page.find('brea') do %>
+					<div class='storytag'><h2>Brea</h2><h4>needed her parents approval</h4></div>
+				<% end %>
 				<h3>"I definitely had an emotional need for my parent's approval, which was hard to work through."</h3>
 			</div>
 		</div>
