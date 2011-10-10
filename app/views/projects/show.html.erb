@@ -1,0 +1,50 @@
+<% content_for :body_content_title do %>
+  <%= @project.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <div class="content_right_secondary">
+			<h1><%= @project.name %></h1><br />
+			<div id="project_info">
+				<div style="background-color: #f7f2e8; padding: 5px;">
+          <p><strong>Location</strong>: <%= @project.display_location %></p>
+					<p><strong>Term</strong>: <%= l(@project.start_date, :format => :long) %> to <%= l(@project.end_date, :format => :long) %></p>
+					<% if @project.url.present? %>
+					  <p><strong>Website</strong>: <a href="<%= @project.url %>"><%= @project.url_title.present? ? @project.url_title : 'Visit' %></a></p>
+					<% end %>
+          <p><strong>Ministry Focus:</strong> <%= @project.primary_focus_name %></p>
+
+					<p><strong>Cost:</strong> $<%= @project.student_cost %></p>
+					<p><strong>Length</strong>: <%= @project.weeks %> Week Project</p>
+					<p><strong>Can a student get a job?</strong> <%= @project.job %></p>
+					
+				</div>
+        
+        <h2>Description</h2>
+				<p>&nbsp;</p>
+				<%= raw @project.description %>
+        <p>&nbsp;</p>
+      </div>
+                        
+      <h2>Contact Information</h2>
+			<p class="breathe"><strong>Project Director:</strong>  <%= @project.pd_name || '-' %> </p>
+			<p><strong>Associate Project Director:</strong>  <%= @project.apd_name || '-' %> </p>
+      <!-- <p>Please <a href="/contact/">contact us</a> with questions.</p> -->
+						                        
+      <div class="facebook_container">
+        <div class="fb_like">
+          <a name="fb_share" class="tipTip"  title="This will share this specific page link and its description with your friends on Facebook by posting it to your wall." href="http://www.facebook.com/sharer.php?u=http://www.gosummerproject.com/projects/<%= @project.id %>" style="border: none;"><img src="http://www.gosummerproject.com/images/fb_share.jpg" border="0" /></a>
+        </div>
+    
+        <div class="fb_recommend" >
+            <fb:like href="http://www.GoSummerProject.com" action="recommend" showfaces="yes" font="segoe ui"></fb:like>
+        </div>
+        
+      </div>
+	  </div> 
+  </section>
+<% end %>
+
+
+<%= render :partial => "/shared/content_page" %>
