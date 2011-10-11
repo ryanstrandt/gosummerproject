@@ -9,7 +9,7 @@
 			<div id="project_info">
 				<div style="background-color: #f7f2e8; padding: 5px;">
           <p><strong>Location</strong>: <%= @project.display_location %></p>
-					<p><strong>Term</strong>: <%= l(@project.start_date, :format => :long) %> to <%= l(@project.end_date, :format => :long) %></p>
+					<p><strong>Term</strong>: <%= l(@project.start_date, :format => :long) if @project.start_date %> to <%= l(@project.end_date, :format => :long) if @project.end_date %></p>
 					<% if @project.url.present? %>
 					  <p><strong>Website</strong>: <a href="<%= @project.url %>"><%= @project.url_title.present? ? @project.url_title : 'Visit' %></a></p>
 					<% end %>

@@ -7,7 +7,7 @@
     <br />
     <% @projects.each do |project| %>
       <div class="listing">
-  			<li class="project_listing"><strong><a class="tipTip" title="<%= l(project.start_date, :format => :long) %> to <%= l(project.end_date, :format => :long) %>" href="/projects/<%= project.id %>"><%= project.name %></strong></a></li></ul>
+  			<li class="project_listing"><strong><a class="tipTip" title="<%= l(project.start_date, :format => :long) if project.start_date %> to <%= l(project.end_date, :format => :long) if project.end_date %>" href="/projects/<%= project.id %>"><%= project.name %></strong></a></li></ul>
   		</div>	
   	<% end %>
   <% else %>
