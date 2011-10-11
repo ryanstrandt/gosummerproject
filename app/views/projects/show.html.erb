@@ -17,7 +17,7 @@
 
 					<p><strong>Cost:</strong> $<%= @project.student_cost %></p>
 					<p><strong>Length</strong>: <%= @project.weeks %> Week Project</p>
-					<p><strong>Can a student get a job?</strong> <%= @project.job %></p>
+					<p><strong>Can a student get a job?</strong> <%= @project.job ? 'yes' : 'no' %></p>
 					
 				</div>
         
