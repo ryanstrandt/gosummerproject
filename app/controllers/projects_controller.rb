@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
     @key = Digest::SHA1.hexdigest(params.collect {|k,v| [k,v]}.flatten.join('/'))
     unless fragment_exist?(@key)
       unless params.size == 2
-        year = 2012
+        year = 2010
         conditions = [[],[]]
         conditions[0] << "#{SpProject.table_name}.show_on_website = 1"
         conditions[0] << "#{SpProject.table_name}.year = ? "
@@ -16,6 +16,15 @@ class ProjectsController < ApplicationController
         conditions[1] << year
         unless params[:all] == 'true'
           
+          if params[:id] && !params[:id].empty?
+            ids = params[:id].split(',')
+            condition = []
+            ids.each do |id| 
+              condition << "#{SpProject.table_name}.id = ?"
+              conditions[1] << id
+            end
+            conditions[0] << '(' + condition.join(' OR ') + ')'
+          end
           if params[:name] && !params[:name].empty?
             conditions[0] << "#{SpProject.table_name}.name like ?"
             conditions[1] << "%#{params[:name]}%"

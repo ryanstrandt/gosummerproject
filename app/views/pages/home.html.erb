@@ -33,14 +33,14 @@
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by GEOGRAPHY</h1>
 						<div class='cols' style="margin:60px 50px 0 100px;">
-							<%= link_to image_tag('slide/us.png'), '#' %>
-							<%= link_to "#" do %>
+							<%= link_to image_tag('slide/us.png'), '/projects?aoa=north+america' %>
+							<%= link_to "/projects?aoa=north+america" do %>
 								<h2>In the<br/>United States</h2>
 							<% end %>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/international.png'), '#' %>
-							<%= link_to "#" do %>
+							<%= link_to image_tag('slide/international.png'), '/projects?aoa=eastern+europe,western+europe,east+asia,south+asia,southeast+asia,namestan,Francophone+Africa,Namestan,Southern+and+Eastern+Africa,Nigeria,Cntrl+America,South+America,Australia,South+Pacific' %>
+							<%= link_to "/projects?aoa=eastern+europe,western+europe,east+asia,south+asia,southeast+asia,namestan,Francophone+Africa,Namestan,Southern+and+Eastern+Africa,Nigeria,Cntrl+America,South+America,Australia,South+Pacific" do %>
 								<h2>The Rest<br/>of the world</h2>
 							<% end %>
 						</div>
@@ -48,56 +48,56 @@
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by their length</h1>
 						<div class='cols'>
-							<%= link_to image_tag('slide/1-2weeks.png'), '#' %>
-							<a href='#'><h2>a little bit<br/>of time</h2></a>
+							<%= link_to image_tag('slide/1-2weeks.png'), '/projects?from_weeks=1&to_weeks=2' %>
+							<a href='/projects?from_weeks=1&to_weeks=2'><h2>a little bit<br/>of time</h2></a>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/3-5weeks.png'), '#' %>
-							<a href='#'><h2>about a<br/>month</h2></a>
+							<%= link_to image_tag('slide/3-5weeks.png'), '/projects?from_weeks=3&to_weeks=5' %>
+							<a href='/projects?from_weeks=3&to_weeks=5'><h2>about a<br/>month</h2></a>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/7-12weeks.png'), '#' %>
-							<a href='#'><h2>the whole<br/>summer</h2></a>
+							<%= link_to image_tag('slide/7-12weeks.png'), '/projects?from_weeks=6&to_weeks=12' %>
+							<a href='/projects?from_weeks=6&to_weeks=12'><h2>the whole<br/>summer</h2></a>
 						</div>
 					</div>
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by their environment</h1>
 						<div class='cols'>
-							<%= link_to image_tag('slide/city.png'), '#' %>
-							<a href='#'><h2>In the City</h2></a>
+							<%= link_to image_tag('slide/city.png'), '/projects?focus=11' %>
+							<a href='/projects?focus=11'><h2>In the City</h2></a>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/beach.png'), '#' %>
-							<a href='#'><h2>On the Beach</h2></a>
+							<%= link_to image_tag('slide/beach.png'), '/projects?focus=2' %>
+							<a href='/projects?focus=2'><h2>On the Beach</h2></a>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/mountains.png'), '#' %>
-							<a href='#'><h2>Mountains</h2></a>
+							<%= link_to image_tag('slide/mountains.png'), '/projects?id=326,335,338,343,391,406,409,426,433,630,631' %>
+							<a href='/projects?id=326,335,338,343,391,406,409,426,433,630,631'><h2>Mountains</h2></a>
 						</div>
 					</div>
 					<div class="slide">
 						<h1>FILTER THROUGH PROJECTS<br/>by their options</h1>
 						<div class='cols'>
-							<%= link_to image_tag('slide/intern.png'), '#' %>
-							<a href='#'><h2>Office<br/>Internship</h2></a>
+							<%= link_to image_tag('slide/intern.png'), '/projects?focus=12' %>
+							<a href='/projects?focus=12'><h2>Office<br/>Internship</h2></a>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/job.png'), '#' %>
-							<a href='#'><h2>You can<br/>get a job</h2></a>
+							<%= link_to image_tag('slide/job.png'), '/projects?job=1' %>
+							<a href='/projects?job=1'><h2>You can<br/>get a job</h2></a>
 							<h3></h3>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/greek.png'), '#' %>
-							<a href='#'><h2>Work with<br/>Greek Students</h2></a>
+							<%= link_to image_tag('slide/greek.png'), '/projects?focus=8' %>
+							<a href='/projects?focus=8'><h2>Work with<br/>Greek Students</h2></a>
 						</div>
 					</div>
 					<div class="slide">
 						<h1>CHECK OUT ALL THE OTHER<br/>SUMMER PROJECTS</h1>
 						<div class='cols' style=" width:300px; margin-right:45px;">
-							<%= link_to image_tag('slide/ethnic.png'), '#' %>
+							<%= link_to image_tag('slide/ethnic.png'), '/projects?focus=3,4,5,7,22' %>
 						</div>
 						<div class='cols'>
-							<%= link_to image_tag('slide/opportunities.png'), '#' %>
+							<%= link_to image_tag('slide/opportunities.png'), '/projects' %>
 						</div>
 					</div>
 				</div>

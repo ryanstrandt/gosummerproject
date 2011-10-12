@@ -49,7 +49,7 @@
 <div id="stitch">
 <ul class='landing'> 
 <li><%= link_to image_tag("nav/whatissp.png"), page = Page.find('what-is-summer-project') %></li> 
-<li><%= link_to image_tag("nav/projects.png"), page = Page.find('projects') %></li> 
+<li><%= link_to image_tag("nav/projects.png"), '/projects' %></li> 
 <li><%= link_to image_tag("nav/guide.png"), page = Page.find('guide') %></li>
 <li><% if current_page?(root_url) %> 
 			<%= link_to image_tag("nav/status.png"), '#calendar' %>
