@@ -163,7 +163,7 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 }
 
 #page .container, #exploreProj .container { margin-top:20px; padding-bottom:40px; width:850px; }
-#page #Content, #exploreProj #Content { float:right; margin:50px 20px 0 20px; width:560px; }
+#page #Content, #exploreProj #Content, #contactForm #body_content_ { float:right; margin:50px 20px 0 20px; width:560px; }
 #page #sideBar, #exploreProj #sideBar { border-right: 2px dotted #ccc; float:left; margin:100px 0 0 10px; padding-right:25px; width:200px; }
 #page h1 {color:#ec1d3b; text-align:left;}
 #page h2 {color:#00b2af;}
@@ -191,6 +191,9 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 /* === FAQ === */
 #faqAccordion h2 {cursor:pointer; display:block; font-size:18px; padding-top:10px;}
 #faqAccordion p {display:block; margin-left:20px; margin-bottom:20px;}
+
+/* === CONTACT === */
+#contactForm {}
 
 /* ===========================================
 	MISC
