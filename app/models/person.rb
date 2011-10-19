@@ -212,11 +212,7 @@ class Person < ActiveRecord::Base
   
   # This method shouldn't be needed because nightly updater should fill this in
   def is_secure?
-    if staff
-      (staff.isSecure == 'T' ? true : false)
-    else
-      false
-    end
+    isSecure == 'T' ? true : false
   end
   
   # Find an exact match by email
