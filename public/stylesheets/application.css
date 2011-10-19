@@ -152,7 +152,7 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 /* ===========================================
 	PAGES
 ============================================== */
-#pageBox, #exploreProj {
+#pageBox, #exploreProj, #contactForm {
 	width:900px;
 	-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;
   -moz-box-shadow: inset 0 0 1px 3px #CCC;
@@ -162,10 +162,10 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 	margin-top:150px;
 }
 
-#page .container, #exploreProj .container { margin-top:20px; padding-bottom:40px; width:850px; }
-#page #Content, #exploreProj #Content, #contactForm #body_content_ { float:right; margin:50px 20px 0 20px; width:560px; }
-#page #sideBar, #exploreProj #sideBar { border-right: 2px dotted #ccc; float:left; margin:100px 0 0 10px; padding-right:25px; width:200px; }
-#page h1 {color:#ec1d3b; text-align:left;}
+#page .container, #exploreProj .container, #contactForm .container { margin-top:20px; padding-bottom:40px; width:850px; }
+#page #Content, #exploreProj #Content, #contactForm #Content { float:right; margin:50px 20px 0 20px; width:560px; }
+#page #sideBar, #exploreProj #sideBar, #contactForm #sideBar { border-right: 2px dotted #ccc; float:left; margin:100px 0 0 10px; padding-right:25px; width:200px; }
+#page h1, #contactPage h1 {color:#ec1d3b; text-align:left;}
 #page h2 {color:#00b2af;}
 #page h3 {color:#00b2af; margin-top:1em;}
 
@@ -193,7 +193,10 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 #faqAccordion p {display:block; margin-left:20px; margin-bottom:20px;}
 
 /* === CONTACT === */
-#contactForm {}
+.inquiries .new_inquiry {margin-top:20px;}
+.new_inquiry .field {margin-top:5px;}
+.new_inquiry label {font-weight:bold; padding-right:10px;}
+.new_inquiry #inquiry_submit {font-size:14px;}
 
 /* ===========================================
 	MISC
