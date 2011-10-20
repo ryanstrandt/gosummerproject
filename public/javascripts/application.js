@@ -24,3 +24,6 @@ $(function(){
 		return false;
 	}).next().hide();
 });
+$(function(){
+  	$(".tipTip").tipTip({delay: 1});
+});

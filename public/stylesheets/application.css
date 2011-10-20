@@ -103,14 +103,12 @@ section { text-align: left; overflow:hidden; height:100%; width: 100%; margin: 0
 #feb24 { background:url('/images/feb24.png') no-repeat; height:64px;}
 #divide { background:url('/images/divide.png') no-repeat; height:64px;}
 #status {width: 350px; text-align:left;  float: left; margin:40px 30px 30px 75px;}
-#facebook { background:url('/images/facebook.png') no-repeat; height:69px;}
-#google { background:url('/images/google.png') no-repeat; height:69px;}
-#relay { background:url('/images/relay.png') no-repeat; height:69px;}
 .services { width:69px; float:left; margin:10px 20px; text-align:center;}
-#login {background:#AAE2F3; height:120px; margin-top:0; -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+#login {background:#AAE2F3; height:150px; margin-top:0; -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+#forgotPass {font-size:12px; margin-left:15px; padding-top:10px;}
 
 input { height: 30px; margin:5px 15px; padding-left:5px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; font-family: sans-serif; font-size: 21px; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;}
-#name {width: 315px;}
+#username {width: 315px;}
 #password {width: 200px;}
 input[type=submit] { background-color:#108DA2; height:30px; width:100px; margin:-35px 15px; float:right; padding:0; font-family: 'Rockwell'; color:#FFF; font-size:21px; text-decoration:none; border:none; -moz-border-radius: 5px;border-radius: 5px;  text-decoration:none; -moz-transition: background 0.15s linear; -webkit-transition: background 0.15s linear; transition: background 0.15s linear;}
 input[type=submit]:hover { background-color:#666666;}
@@ -163,30 +161,42 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 }
 
 #page .container, #exploreProj .container, #contactForm .container { margin-top:20px; padding-bottom:40px; width:850px; }
-#page #Content, #exploreProj #Content, #contactForm #Content { float:right; margin:50px 20px 0 20px; width:560px; }
-#page #sideBar, #exploreProj #sideBar, #contactForm #sideBar { border-right: 2px dotted #ccc; float:left; margin:100px 0 0 10px; padding-right:25px; width:200px; }
-#page h1, #contactPage h1 {color:#ec1d3b; text-align:left;}
+#page #Content, #exploreProj #Content, #contactForm #Content { float:right; margin:0 10px 0 10px; width:570px; }
+#page #sideBar, #exploreProj #sideBar, #contactForm #sideBar { border-right: 2px dotted #ccc; float:left; margin-top:70px; padding-right:25px; width:220px; }
+#page #contentTop {margin-top:30px;}
+#page h1, #contactPage h1, #exploreProj h1 {color:#ec1d3b; margin-top:30px; text-align:left;}
 #page h2 {color:#00b2af;}
 #page h3 {color:#00b2af; margin-top:1em;}
+
+#page blockquote {
+	-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;
+	background:#676766;
+	clear:both;
+	font: italic 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	float:right;
+	margin:10px;
+	padding:10px;
+	width:150px;
+}
+#page ul {font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; margin-left:20px;}
+#page li {color:#666; list-style:none;}
+#page li a:hover {text-decoration:underline;}
+
+#page .back-to-top {clear:both; float:right;}
 
 /* === Explore Projects === */
 #exploreProj .listing {margin-top:20px;}
 #exploreProj .listing li {list-style:none;}
+#exploreProj .project_listing a, #exploreProj .locations a {border-bottom:1px dotted; font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;}
+#exploreProj .project_listing a:hover, #exploreProj .locations a:hover {color:#ec1d3b;}
 .explore_projects, #datepicker-title, #projContact {border-top: 2px dotted #ccc; margin-top:30px; padding-top:20px;}
-.explore_projects h3 {font-size:1em;}
-.explore_projects h4, #project_info h4 {margin-top:10px;}
+.explore_projects h3 {color:#00b2af; font:bold 1em;}
+.explore_projects h4, #project_info h4 {color:#00b2af; margin-top:10px;}
 .explore_projects ul {margin-left:10px;}
 .explore_projects li {font-size:12px; list-style:none;}
 .explore_projects p, #project_info p {font-size:12px; margin:0;}
 #exploreProj .facebook_container {margin-top:30px;}
 #exploreProj .fb_like {float:left; margin:30px 30px 0 0;}
-
-/* === Explore Projects Calendar === */
-.ui-datepicker {font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;}
-.ui-datepicker-prev {float:left;}
-.ui-datepicker-next {float:right;}
-.ui-datepicker-title {padding-left:50px;}
-.ui-button {font-size:.8em; padding:5px;}
 
 /* === FAQ === */
 #faqAccordion h2 {cursor:pointer; display:block; font-size:18px; padding-top:10px;}

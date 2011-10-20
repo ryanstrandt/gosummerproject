@@ -1,7 +1,7 @@
 /*
 * Author:      Marco Kuiper (http://www.marcofolio.net/)
 */
-google.load("jqueryui", "1.7.0");
+google.load("jqueryui", "1.8.16");
 google.setOnLoadCallback(function()
 {
 	// NOTE: JUST FOR DEMO, A TOGGLE CLASS HAS BEEN ADDED

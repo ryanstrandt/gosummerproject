@@ -1,10 +1,11 @@
+<%= javascript_include_tag 'jquery.tipTip', :cache => true %>
 <% content_for :body_content_left do %>
 <section id="exploreProj">
 	<div class="container">	
   <% if @projects %>
 		<div id="sideBar">
-			<h2>Results</h2>					
-			<p>As we prepare for all of our 2011 Summer Projects, our project information will be continually updated; please check back regularly for new opportunities.</p>
+			<h2>Project Filter</h2>					
+			<p>As we prepare for all of our 2012 Summer Projects, our project information will be continually updated; please check back regularly for new opportunities.</p>
 			<div class="explore_projects">
 	      <h3>Explore using categories</h3>
 	    	<h4><a id="us"></a>US project locations</h4>
@@ -54,7 +55,7 @@
 	        <li><a href='/projects?focus=18'>Taking the Jesus film to un-reached places</a></li>
 	        <li><a href='/projects?focus=12'>Use your Technical / Design / Administrative skills for ministry</a></li>				
 	      </ul>
-	    	<script type="text/javascript" src="http://www.gosummerproject.com/js/datepicker.js"></script>
+				<%= javascript_include_tag "datepicker" %>
 	    	<h4 id="datepicker-title">Find projects that fit your availability</h4>
 	    	<p>Note: Choosing too large of a date range may result in the list failing to load.</p>
 	    	<div class="datepicker">

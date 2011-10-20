@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
     @key = Digest::SHA1.hexdigest(params.collect {|k,v| [k,v]}.flatten.join('/'))
     unless fragment_exist?(@key)
       unless params.size == 2
-        year = 2012
+        year = 2010
         conditions = [[],[]]
         conditions[0] << "#{SpProject.table_name}.show_on_website = 1"
         conditions[0] << "#{SpProject.table_name}.year = ? "
