@@ -116,10 +116,10 @@
 			<div class='col2'  style="text-align:left; margin-top:60px;">
 				<h2 style="padding:0 20px;">Making the Decision</h2>
 				<h4 style="padding:10px 20px 0;">God has some exciting plans for developing your heart this summer. We want to help you in processing how the Lord may be leading you to serve. Consider these questions, get a guide book and ask God to help you understand His call on your life for the summer ahead.</h4>
-				<h2 style="font-size:18px; color:#EC173F;padding:0 20px 35px;"><%= link_to "Click here to learn more.", page = Page.find('guide') %></h2>
+				<h2 style="font-size:18px; color:#EC173F;padding:0 20px 35px;"><%= link_to "Click here to learn more.", '/guide' %></h2>
 				<div id="questions"></div>
 				<div class="box" style="margin-top:25px; padding:19px; background:#fff;">
-					<%= link_to page = Page.find('faq') do %><h2 id="faq"></h2><% end %><%= link_to page = Page.find('guide') do %><h2 id="guide"></h2><% end %></div>
+					<%= link_to '/faq' do %><h2 id="faq"></h2><% end %><%= link_to '/guide' do %><h2 id="guide"></h2><% end %></div>
 				</div>
 			</div>
 			<div class='col2' style="width:425px; margin-left:50px;padding:0;">
@@ -177,21 +177,21 @@
 		<h1>SEE, HEAR &amp; SHARE WHAT'S BEEN GOING ON</h1>
 		<div style="width:900px; margin:auto;">
 			<div class='col3'>
-				<%= link_to page = Page.find('photo-albums') do %>
+				<%= link_to '/photo-albums' do %>
 					<h2 id='camera'></h2>
 					<h2 class='downloadtag'>VIEW SOME<br />PHOTO ALBUMS</h2>
 				<% end %>
 				<h3>These photographs are from Summer Projects around the world by real students recording their project experience – from new friends, to local culture, to a day at work.</h3>
 			</div>
 			<div class='col3'>
-				<%= link_to page = Page.find('video') do %>
+				<%= link_to '/videos' do %>
 					<h2 id='video'></h2>
 					<h2 class='downloadtag'>CHECK OUT<br />VIDEO &amp; AUDIO</h2>
 				<% end %>
 				<h3>Browse through the promotional videos for Cru meetings, stories to share with friends, and spotlight videos. You can download all the videos on a desktop or mobile device.</h3>
 			</div>
 			<div class='col3'>
-				<%= link_to page = Page.find('graphics') do %>
+				<%= link_to '/graphics' do %>
 					<h2 id='graphics'></h2>
 					<h2 class='downloadtag'>DOWNLOAD<br />2012 GRAPHICS</h2>
 				<% end %>
@@ -248,22 +248,22 @@
 		<h1>HERE ARE THE STORIES OF OTHERS LIKE YOU</h1> 
 		<div style="width:800px; margin:auto;margin-top:15px;">
 			<div class='col'>
-				<%= link_to image_tag('stories/anna.png'), page = Page.find('anna') %>
-				<%= link_to page = Page.find('anna') do %>
+				<%= link_to image_tag('stories/anna.png'), '/stories/anna' %>
+				<%= link_to '/stories/anna' do %>
 					<div class='storytag'><h2>Anna</h2><h4>struggled with personal insecurities</h4></div>
 				<% end %>
 				<h3>"I still had to be aware of my multiple sclerosis, but I couldn't let that overpower the call the Lord had placed on my heart."</h3>
 			</div>
 			<div class='col'>
-				<%= link_to image_tag('stories/danny.png'), page = Page.find('danny') %>
-				<%= link_to page = Page.find('danny') do %>
+				<%= link_to image_tag('stories/danny.png'), '/stories/danny' %>
+				<%= link_to '/stories/danny' do %>
 					<div class='storytag'><h2>Danny</h2><h4>struggled with raising support</h4></div>
 				<% end %>
 				<h3>"I had to raise support while studying abroad. So it was very strange and I felt disconnected from everything."</h3>
 			</div>
 			<div class='col'>
-				<%= link_to image_tag('stories/jordan.png'), page = Page.find('jordan') %>
-				<%= link_to page = Page.find('jordan') do %>				
+				<%= link_to image_tag('stories/jordan.png'), '/stories/jordan' %>
+				<%= link_to '/stories/jordan' do %>				
 					<div class='storytag'><h2>Jordan</h2><h4>needed to find a job</h4></div>
 				<% end %>
 				<h3>"Everything is possible through the Lord, but it's easy for those words to become empty when you feel defeated." </h3>
@@ -271,22 +271,22 @@
 		</div>
 		<div style="width:800px; margin:auto;">
 			<div class='col'>
-				<%= link_to image_tag('stories/jacob.png'), page = Page.find('jacob') %>
-				<%= link_to page = Page.find('jacob') do %>
+				<%= link_to image_tag('stories/jacob.png'), '/stories/jacob' %>
+				<%= link_to '/stories/jacob' do %>
 					<div class='storytag'><h2>Jacob</h2><h4>struggled with other<br>summer requirements</h4></div>
 				<% end %>
 				<h3>"I wanted to know that summer project wasn't just a good thing to do. I wanted to know that summer project was the God thing to do."</h3>
 			</div>
 			<div class='col'>
-				<%= link_to image_tag('stories/elizabeth.png'), page = Page.find('elizabeth') %>
-				<%= link_to page = Page.find('elizabeth') do %>
+				<%= link_to image_tag('stories/elizabeth.png'), '/stories/elizabeth' %>
+				<%= link_to '/stories/elizabeth' do %>
 					<div class='storytag'><h2>Elizabeth</h2><h4>questioned God's call</h4></div>
 				<% end %>
 				<h3>"I just didn't think the Lord had called me to go out of the country and that he could use me to share his gospel."</h3>
 			</div>
 			<div class='col'>
-				<%= link_to image_tag('stories/brea.png'), page = Page.find('brea') %>
-				<%= link_to page = Page.find('brea') do %>
+				<%= link_to image_tag('stories/brea.png'), '/stories/brea' %>
+				<%= link_to '/stories/brea' do %>
 					<div class='storytag'><h2>Brea</h2><h4>needed her parents approval</h4></div>
 				<% end %>
 				<h3>"I definitely had an emotional need for my parent's approval, which was hard to work through."</h3>

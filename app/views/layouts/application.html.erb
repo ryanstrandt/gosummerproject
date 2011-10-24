@@ -62,19 +62,19 @@
 </ul> 
 <div id="stitch">
 <ul class='landing'> 
-<li><%= link_to image_tag("nav/whatissp.png"), page = Page.find('what-is-a-summer-project') %></li> 
+<li><%= link_to image_tag("nav/whatissp.png"), '/what-is-a-summer-project' %></li> 
 <li><%= link_to image_tag("nav/projects.png"), '/projects' %></li> 
-<li><%= link_to image_tag("nav/guide.png"), page = Page.find('guide') %></li>
+<li><%= link_to image_tag("nav/guide.png"), '/guide' %></li>
 <li><% if current_page?(root_url) %> 
 			<%= link_to image_tag("nav/status.png"), '#calendar' %>
 		<% else %>
 			<%= link_to image_tag("nav/status.png"), root_url + "#calendar" %>
 		<% end %>
 </li> 
-<li><%= link_to image_tag("nav/accepted.png"), page = Page.find('accepted') %></li> 
-<li style="margin-left:160px;"><%= link_to image_tag("nav/aboutcru.png"), page = Page.find('about-cru') %></li> 
-<li><%= link_to image_tag("nav/parents.png"), page = Page.find('parents') %></li> 
-<li><%= link_to image_tag("nav/faq.png"), page = Page.find('faq') %></li> 
+<li><%= link_to image_tag("nav/accepted.png"), '/accepted' %></li> 
+<li style="margin-left:160px;"><%= link_to image_tag("nav/aboutcru.png"), '/about-cru' %></li> 
+<li><%= link_to image_tag("nav/parents.png"), '/parents' %></li> 
+<li><%= link_to image_tag("nav/faq.png"), '/faq' %></li> 
 <li><%= link_to image_tag("nav/contact.png"), '/contact' %></li> 
 <li><fb:like href="https://www.facebook.com/summerproject" send="false" layout="button_count" style="margin-top:7px;" send="false" layout="button_count" width="75" show_faces="false"></fb:like></li> 
 </ul> 
