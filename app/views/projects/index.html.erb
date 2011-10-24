@@ -2,8 +2,7 @@
 <% content_for :body_content_left do %>
 <section id="exploreProj">
 	<div class="container">	
-  <% if @projects %>
-		<div id="sideBar">
+  	<div id="sideBar">
 			<h2>Project Filter</h2>					
 			<p>As we prepare for all of our 2012 Summer Projects, our project information will be continually updated; please check back regularly for new opportunities.</p>
 			<div class="explore_projects">
@@ -69,6 +68,7 @@
 	    	<input class="ui-button ui-state-default ui-corner-all dp_button" type="button" name="dp_button" value="Find Projects" />
 	    </div>    
 		</div>
+		<% if @projects %>
 		<div id="Content">
 			<h1>Project Listing</h1>
 			<div class="listing">
@@ -81,85 +81,24 @@
 				<% end %>
 			</div>
 		</div>
-  <% else %>
+  	<% else %>
 		<div id="Content">
+			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+			<%= javascript_include_tag "projects.map" %>
     	<div class="explore_projects_top">
-  			<h2>Explore Summer Projects</h2>
+  			<h1>Explore Summer Projects</h1>
       	<h2>Explore using a map</h2>
-      	<div class="info">Below are only <strong>some</strong> of the projects. If a project is in a sensitive location, or if its coordinates have not been specified, it will not appear on this map. The color of the map marker indicates how full the project is: Green=less than 50%, Yellow=more than 50%, Red=full.</div>
+      	<p class="info">Below are only <strong>some</strong> of the projects. If a project is in a sensitive location, or if its coordinates have not been specified, it will not appear on this map. The color of the map marker indicates how full the project is: Green=less than 50%, Yellow=more than 50%, Red=full.</p>
 	      <script type="text/javascript">
 	      	// Load Google Map first, after rest of page has loaded
 	      	$(document).ready(init);
 	      	// When map has finished loading, add markers
 	      	$(window).load(getMarkers);
 	      </script>
-	      <div id="map_overlay"><img src="images/ajax-loader.gif" width="54" height="55" /></div>
+	      <div id="map_overlay"><%= image_tag("ajax-loader.gif", :size => "54x55") %></div>
 	      <div id="map_canvas" style="width:100%; height: 350px;"></div>
     	</div>
-     
-	    <div class="explore_projects_bottom">
-	      <h3>Explore using categories</h3>
-	    	<h4><a id="us"></a>US project locations</h4>
-    		<ul class="locations">
-    			<li><a href="/projects?from_weeks=1&to_weeks=2&aoa=north+america">1 to 2 week projects</a></li>
-    			<li><a href="/projects?from_weeks=3&to_weeks=5&aoa=north+america">3 to 5 week projects</a></li>
-    			<li><a href="/projects?from_weeks=6&to_weeks=12&aoa=north+america">Traditional 6 to 12 week projects</a></li>
-    			<li><a href="/projects?job=true&aoa=north+america">Need to work? Projects that you find a job on</a></li>
-    			<li><a href="/explore-region/">Explore where students from my state and region go</a></li>
-    		</ul>
-	    	<h4><a id="international"></a>International locations</h4>
-    		<ul class="locations">
-    			<li><a href="/projects?aoa=eastern+europe,western+europe">Europe</a></li>
-    			<li><a href="/projects?aoa=east+asia,south+asia,southeast+asia,namestan">Asia</a></li>
-    			<li><a href="/projects?aoa=Francophone+Africa,Namestan,Southern+and+Eastern+Africa,Nigeria">Africa/Middle East</a></li>
-    			<li><a href="/projects?aoa=Cntrl+America,South+America">Latin America, Caribbean and South America</a></li>
-    			<li><a href="/projects?aoa=Australia,South+Pacific">Australia/New Zealand</a></li>
-    			<li><a href="/projects?from_weeks=1&to_weeks=3&project_type=international">1-3 week projects</a></li>
-    			<li><a href="explore-region">Explore where students from my state and region go</a></li>
-     	 	</ul>
-	    	<h4><a id="focus"></a>Explore by ministry focus</h4>
-	      <ul class="locations">
-	      	<li><a href='/projects?focus=4'>African American community</a></li>
-	        <li><a href='/projects?focus=15'>Art community</a></li>
-	        <li><a href='/projects?focus=13'>Art, Music, Film, Media</a></li>
-	        <li><a href='/projects?focus=5'>Asian American community</a></li>
-	        <li><a href='/projects?focus=9'>Athletes</a></li>
-	        <li><a href='/projects?focus=2'>Beach/Resort community (including co-workers)</a></li>
-	        <li><a href='/projects?focus=1'>College Campus/Launching spiritual movements</a></li>
-	        <li><a href='/projects?focus=23'>Elementary/Preschool</a></li>
-	        <li><a href='/projects?focus=22'>Ethnic Ministry</a></li>
-	        <li><a href='/projects?focus=27'>Fall/Spring Opportunities</a></li>
-	        <li><a href='/projects?focus=10'>For Health students</a></li>
-	        <li><a href='/projects?focus=6'>For High School Students</a></li>
-	        <li><a href='/projects?focus=7'>For International Students</a></li>
-	        <li><a href='/projects?focus=8'>Greeks</a></li>
-	        <li><a href='/projects?focus=3'>Hispanic/Latino community</a></li>
-	        <li><a href='/projects?focus=11'>Inner City community</a></li>
-	        <li><a href='/projects?focus=21'>International Orphan Care</a></li>
-	        <li><a href='/projects?focus=17'>Military community</a></li>
-	        <li><a href='/projects?focus=26'>Ministry to High School Students</a></li>
-	        <li><a href='/projects?focus=24'>Ministry to International Students</a></li>
-	        <li><a href='/projects?focus=25'>MK2MK</a></li>
-	        <li><a href='/projects?focus=19'>Prison Ministry</a></li>
-	        <li><a href='/projects?focus=16'>Serving a community in words and deeds</a></li>
-	        <li><a href='/projects?focus=14'>Take Biblical Courses</a></li>
-	        <li><a href='/projects?focus=18'>Taking the Jesus film to un-reached places</a></li>
-	        <li><a href='/projects?focus=12'>Use your Technical / Design / Administrative skills for ministry</a></li>				
-	      </ul>
-	    	<script type="text/javascript" src="http://www.gosummerproject.com/js/datepicker.js"></script>
-	    	<h3>Find projects that fit your availability</h3>
-	    	<p style="margin-left: 20px;">Note: Choosing too large of a date range may result in the list failing to load.</p>
-	    	<div class="datepicker">
-	    		<h3>Start Date</h3>
-	    		<div id="datepicker_start"></div>
-	    	</div>
-	    	<div class="datepicker">
-	    		<h3>End Date</h3>
-	    		<div id="datepicker_end"></div>
-	    	</div>
-	    	<input class="ui-button ui-state-default ui-corner-all dp_button" type="button" name="dp_button" value="Find Projects" />
-	    </div>
-	  </div>
+    </div>
   <% end %>
 	</div>		
 </section>

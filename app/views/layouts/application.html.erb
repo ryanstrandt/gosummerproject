@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
   <title><%= RefinerySetting.find_or_set(:Site_Name, "2012 Cru Summer Projects") %> </title>
   <%= stylesheet_link_tag :all %>
@@ -9,6 +9,20 @@
   <%= csrf_meta_tag %>
 </head>
 <body> 
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({appId: 'http://www.gosummerproject.com', status: true, cookie: true,
+             xfbml: true});
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+
 <div id='wrapper' role='main'> 
 	<section id='home' role='banner'> 
 		<h2 id='logo'>
@@ -62,7 +76,7 @@
 <li><%= link_to image_tag("nav/parents.png"), page = Page.find('parents') %></li> 
 <li><%= link_to image_tag("nav/faq.png"), page = Page.find('faq') %></li> 
 <li><%= link_to image_tag("nav/contact.png"), '/contact' %></li> 
-<li><div id="fb-root" style="float:left;"></div><fb:like href="https://www.facebook.com/summerproject" send="false" layout="button_count" style="margin-top:7px;" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like></li> 
+<li><fb:like href="https://www.facebook.com/summerproject" send="false" layout="button_count" style="margin-top:7px;" send="false" layout="button_count" width="75" show_faces="false"></fb:like></li> 
 </ul> 
 </div>
 
