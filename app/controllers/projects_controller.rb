@@ -4,8 +4,8 @@ class ProjectsController < ApplicationController
   before_filter :find_page
 
   def index
-    @key = Digest::SHA1.hexdigest(params.collect {|k,v| [k,v]}.flatten.join('/'))
-    unless fragment_exist?(@key)
+    # @key = Digest::SHA1.hexdigest(params.collect {|k,v| [k,v]}.flatten.join('/'))
+    # unless fragment_exist?(@key)
       unless params.size == 2
         year = 2012
         conditions = [[],[]]
@@ -104,13 +104,13 @@ class ProjectsController < ApplicationController
         if conditions[0].empty?
           @projects = []
         else
-          @projects = SpProject.find(:all, 
-                                      :include => [:primary_ministry_focus, :ministry_focuses],
-                                      :conditions => conditions,
-                                      :order => 'sp_projects.name, sp_projects.year')
+          # @projects = SpProject.find(:all, 
+          #                             :include => [:primary_ministry_focus, :ministry_focuses],
+          #                             :conditions => conditions,
+          #                             :order => 'sp_projects.name, sp_projects.year')
         end
       end
-    end
+    # end
     # you can use meta fields from your model instead (e.g. browser_title)
     # by swapping @page for @project in the line below:
     present(@page)
