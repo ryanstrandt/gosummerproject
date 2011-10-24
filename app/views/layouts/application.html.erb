@@ -3,8 +3,9 @@
 <head>
   <title><%= RefinerySetting.find_or_set(:Site_Name, "2012 Cru Summer Projects") %> </title>
   <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag 'jquery.min.js' %>
 	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-	<%= javascript_include_tag :defaults, 'jquery.min.js', 'jquery.stickyPanel', 'jquery.waypoints', 'slides.min.jquery', 'jquery.polaroid', :cache => true %>
+	<%= javascript_include_tag 'jquery.stickyPanel', 'jquery.waypoints', 'slides.min.jquery', 'jquery.polaroid', :defaults %>
 	<script src="http://connect.facebook.net/en_US/all.js#appId=169422786455893&amp;xfbml=1"></script>
   <%= csrf_meta_tag %>
 </head>
