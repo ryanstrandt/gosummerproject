@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   def index
     # @key = Digest::SHA1.hexdigest(params.collect {|k,v| [k,v]}.flatten.join('/'))
     # unless fragment_exist?(@key)
-      unless params.size == 2
+      unless params.size == 3
         year = 2012
         conditions = [[],[]]
         conditions[0] << "#{SpProject.table_name}.show_on_website = 1"
@@ -104,10 +104,10 @@ class ProjectsController < ApplicationController
         if conditions[0].empty?
           @projects = []
         else
-          # @projects = SpProject.find(:all, 
-          #                             :include => [:primary_ministry_focus, :ministry_focuses],
-          #                             :conditions => conditions,
-          #                             :order => 'sp_projects.name, sp_projects.year')
+          @projects = SpProject.find(:all, 
+                                      :include => [:primary_ministry_focus, :ministry_focuses],
+                                      :conditions => conditions,
+                                      :order => 'sp_projects.name, sp_projects.year')
         end
       end
     # end

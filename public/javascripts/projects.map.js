@@ -13,22 +13,22 @@ function init() {
 // Parse XML of project locations to create map markers
 function getMarkers() {
 	// Check session variable 'parsed' to see if markers have already been parsed
-	$.ajax({
-		url: "../get_status.php",
-		success: function(status){
-			eval(status);
-			// If markers haven't been parsed, display loading overlay
-			if( $.trim(parsed) != "true" ) {
-				$('#map_overlay').fadeIn(500);
-			}
-		}
-	});
-	// Generate marker code
-	$.ajax({
-		url: "../get_locations.php",
-		success: function(markers){
-			eval(markers);
-			$('#map_overlay').fadeOut(500);
-		}
-	});
+  // $.ajax({
+  //  url: "../get_status.php",
+  //  success: function(status){
+  //    eval(status);
+  //    // If markers haven't been parsed, display loading overlay
+  //    if( $.trim(parsed) != "true" ) {
+  //      $('#map_overlay').fadeIn(500);
+  //    }
+  //  }
+  // });
+  // // Generate marker code
+  // $.ajax({
+  //  url: "../get_locations.php",
+  //  success: function(markers){
+  //    eval(markers);
+  //    $('#map_overlay').fadeOut(500);
+  //  }
+  // });
 }
