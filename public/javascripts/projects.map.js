@@ -7,7 +7,6 @@ function init() {
 	var myOptions = { zoom: 2,center: map_focus,mapTypeId: google.maps.MapTypeId.ROADMAP };  
 	map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	$('#map_overlay').hide();
-	$('#map_overlay').css('visibility', 'visible');
 }
 
 // Parse XML of project locations to create map markers
@@ -24,11 +23,14 @@ function getMarkers() {
   //  }
   // });
   // // Generate marker code
-  // $.ajax({
-  //  url: "../get_locations.php",
-  //  success: function(markers){
-  //    eval(markers);
-  //    $('#map_overlay').fadeOut(500);
-  //  }
-  // });
+  // $('#map_overlay').show();
+  $.ajax({
+   url: "/projects/markers.js",
+   success: function(markers){
+     eval(markers);
+   },
+   complete: function() {
+     // $('#map_overlay').hide();
+   }
+  });
 }

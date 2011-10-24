@@ -1,5 +1,9 @@
 Gosummerproject::Application.routes.draw do
-  resources :projects, :only => [:show, :index]
+  resources :projects, :only => [:show, :index] do
+    collection do 
+      get :markers
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
