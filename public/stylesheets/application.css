@@ -220,22 +220,24 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 	-webkit-box-shadow: inset 0 0 1px 3px #CCC;
 	box-shadow: inset 0 0 1px 3px #CCC;
 }
-
 #photos .slides_container {
-	width:850px;
-	height:400px;
+	width:830px;
+	height:380px;
 	overflow:hidden;
 	position:absolute;
 	display:none;
 }
-
 #photos #slides .slide {
-	width:500px;
-	height:400px;
-	margin:25px 75px;
+	-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;
+	width:820px;
+	height:370px;
+	margin:20px;
 	display:block;
 }
-
+#photos .pagination {
+	margin:30px auto 0;
+	width:400px;
+}
 
 /* ===========================================
 	MISC
