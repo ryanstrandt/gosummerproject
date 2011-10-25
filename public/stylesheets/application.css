@@ -161,12 +161,12 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 }
 
 #page .container, #exploreProj .container, #contactForm .container { margin-top:20px; padding-bottom:40px; width:850px; }
-#page #Content, #exploreProj #Content, #contactForm #Content { float:right; margin:0 10px 0 10px; width:570px; }
-#page #sideBar, #exploreProj #sideBar, #contactForm #sideBar { border-right: 2px dotted #ccc; float:left; margin-top:70px; padding-right:25px; width:220px; }
+#page #Content, #exploreProj #Content, #contactForm #Content, #stories #Content { float:right; margin:0 10px 0 10px; width:570px; }
+#page #sideBar, #exploreProj #sideBar, #contactForm #sideBar, #stories #sideBar { border-right: 2px dotted #ccc; float:left; margin-top:70px; padding-right:25px; width:220px; }
 #page #contentTop {margin-top:30px;}
-#page h1, #contactPage h1, #exploreProj h1 {color:#ec1d3b; margin-top:30px; text-align:left;}
-#page h2 {color:#00b2af;}
-#page h3 {color:#00b2af; margin-top:1em;}
+#page h1, #contactPage h1, #exploreProj h1, #page_one_col h1 {color:#ec1d3b; margin-top:30px; text-align:left;}
+#page h2, #page_one_col h2 {color:#00b2af;}
+#page h3, #page_one_col h3 {color:#00b2af; margin-top:1em;}
 
 #page blockquote {
 	-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;
@@ -207,6 +207,40 @@ input:-webkit-input-placeholder, input:-moz-placeholder {color:#CCC;}
 .new_inquiry .field {margin-top:5px;}
 .new_inquiry label {font-weight:bold; padding-right:10px;}
 .new_inquiry #inquiry_submit {font-size:14px;}
+
+/* === One Col === */
+#page_one_col .container {margin-top:20px; padding-top:20px; padding-bottom:40px; width:850px;}
+
+/* === STORIES === */
+#stories .container { margin-top:150px; padding-bottom:40px; width:850px; }
+
+/* === PHOTOS === */
+#photos .container {margin-top:20px; padding-top:20px; padding-bottom:40px; width:850px;}
+#photos #slidemain {
+	-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;
+	-moz-box-shadow: inset 0 0 1px 3px #CCC;
+	-webkit-box-shadow: inset 0 0 1px 3px #CCC;
+	box-shadow: inset 0 0 1px 3px #CCC;
+	height:400px;
+	position:relative;
+	margin-bottom:40px;
+	width:850px;
+}
+#photos .slides_container {
+	width:850px;
+	height:400px;
+	overflow:hidden;
+	position:absolute;
+	display:none;
+}
+#photos #slides .slide {
+	width:750px;
+	height:350px;
+	margin:25px 75px;
+	display:block;
+}
+#photos #slides .next {left:500px;}
+
 
 /* ===========================================
 	MISC

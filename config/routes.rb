@@ -1,5 +1,12 @@
 Gosummerproject::Application.routes.draw do
   resources :projects, :only => [:show, :index]
+  
+  # match 'photo-albums/us-photo-album', :to => 'pages#photos' 
+  # match 'photo-albums/international-photo-album', :to => 'pages#photos' 
+  match 'graphics', :to => 'pages#one_col' 
+  match 'stories/anna', :to => 'pages#stories' 
+  match 'stories/danny', :to => 'pages#stories' 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
