@@ -54,18 +54,18 @@ class ProjectsController < ApplicationController
           end
           if params[:start_month].present?
             day = params[:start_day].present? ? params[:start_day].to_i : 1
-            start_date = Time.mktime(year, params[:start_month].to_i, day)
+            start_date = Time.mktime(@year, params[:start_month].to_i, day)
             conditions[0] << "#{SpProject.table_name}.start_date >= ?"
             conditions[1] << start_date.to_s(:db)
           end
 
           if params[:end_month] && !params[:end_month].empty?
             day = params[:end_day].present? ? params[:end_day].to_i : COMMON_YEAR_DAYS_IN_MONTH[params[:end_month].to_i]
-            end_date = Time.mktime(year, params[:end_month].to_i, day)
+            end_date = Time.mktime(@year, params[:end_month].to_i, day)
             conditions[0] << "#{SpProject.table_name}.end_date <= ?"
             conditions[1] << end_date
           elsif params[:start_month].present?
-            end_date = Time.mktime(year, 12, 31)
+            end_date = Time.mktime(@year, 12, 31)
             conditions[0] << "#{SpProject.table_name}.end_date <= ?"
             conditions[1] << end_date
           end
@@ -157,7 +157,7 @@ protected
   end
   
   def basic_conditions
-    year = 2012
+    @year = 2012
     conditions = [[],[]]
     conditions[0] << "#{SpProject.table_name}.show_on_website = 1"
     conditions[0] << "#{SpProject.table_name}.year = ? "
