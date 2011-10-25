@@ -1,3 +1,23 @@
+<% if @page[:title]=="US Photo Album" || @page[:title]=="International Photo Album" %> 
+<section id="photos" class="fabric"> 
+	<div id="pageBox">
+		<div class="container">
+			<div id="slidemain">
+				<div id="slides">
+					<div class="slides_container">
+				    <% @page.images.each do |i| %>
+						<div class="slide">
+			       	<%= link_to image_tag(i.thumbnail("900x600").url), i.url %>
+			     	</div>
+			   		<% end %>
+						<a href="" class="prev"><h2>&lsaquo;&lsaquo;</h2></a>
+						<a href="" class="next"><h2>&rsaquo;&rsaquo;</h2></a>
+			 		</div>
+				</div>
+			</div>
+			<%= raw @page.content_for(:body) %>
+			
+<% else %>
 <section id="page" class="fabric"> 
 	<div id="pageBox">
 		<div class="container">
@@ -8,6 +28,7 @@
 				<%= raw @page.content_for(:body) %>
 			</div>
 			<div class="clear"></div>
+<% end %>
 		</div>
 	</div>
 </section> 
