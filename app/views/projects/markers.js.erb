@@ -1,0 +1,13 @@
+<% @projects.each_with_index do |project, i| %>
+  <% if project.latitude.present? && project.longitude.present? %>
+    var marker<%= i %> = new google.maps.Marker({
+      position: new google.maps.LatLng(<%= project.latitude %>, <%= project.longitude %>),
+      map: window.map,
+      icon: 'http://www.google.com/intl/en_us/mapfiles/ms/micons/<%= project.color %>-dot.png',
+      title: "<%= j(project.name) %>"
+    });
+    google.maps.event.addListener(marker<%= i %>, "click", function() {
+      window.location = "/projects/<%= project.id %>";
+    });
+  <% end %>
+<% end %>

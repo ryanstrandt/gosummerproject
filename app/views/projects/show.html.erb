@@ -1,0 +1,54 @@
+<%= javascript_include_tag 'jquery.tipTip', :cache => true %>
+<% content_for :body_content_title do %>
+  <%= @project.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+<section id="exploreProj">
+	<div class="container">	
+		<div id="sideBar">
+			<div id="project_info">
+      	<h4>Location:</h4>
+				<p><%= @project.display_location %></p>
+				<h4>Term:</h4>
+				<p><%= l(@project.start_date, :format => :long) if @project.start_date %> to <%= l(@project.end_date, :format => :long) if @project.end_date %></p>
+				<% if @project.url.present? %>
+					<h4>Website:</h4>
+			  	<p><a href="<%= @project.url %>"><%= @project.url_title.present? ? @project.url_title : 'Visit' %></a></p>
+				<% end %>
+        <h4>Ministry Focus:</h4>
+				<p><%= @project.primary_focus_name %></p>
+				<h4>Cost:</h4>
+				<p>$<%= @project.student_cost %></p>
+				<h4>Length:</h4>
+				<p><%= @project.weeks %> Week Project</p>
+				<h4>Can a student get a job?</h4>
+				<p><%= @project.job ? 'yes' : 'no' %></p>	
+				<div id="projContact">				
+					<h3>Contact Information</h3>
+					<h4>Project Director:</h4>
+					<p><%= @project.pd_name %></p>
+					<h4>Associate Project Director:</h4>
+					<p><%= @project.apd_name %></p>
+				</div>			
+			</div>
+		</div>
+    <div id="Content">
+			<h1><%= @project.name %></h1><br />  
+      <h2>Description</h2>
+			<p><%= raw @project.description %></p>
+			<div class="facebook_container">
+        <div class="fb_like">
+          <a name="fb_share" class="tipTip"  title="This will share this specific page link and its description with your friends on Facebook by posting it to your wall." href="http://www.facebook.com/sharer.php?u=http://www.gosummerproject.com/projects/<%= @project.id %>" style="border: none;"><img src="http://www.gosummerproject.com/images/fb_share.jpg" border="0" /></a>
+        </div>
+        <div class="fb_recommend" >
+        	<fb:like href="http://www.GoSummerProject.com" action="recommend" showfaces="yes" font="segoe ui"></fb:like>
+        </div>
+    	</div>   
+	  </div> 
+  </div>
+</section>
+<% end %>
+
+
+<%= render :partial => "/shared/content_page" %>
