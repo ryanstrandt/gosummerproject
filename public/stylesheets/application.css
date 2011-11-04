@@ -54,6 +54,7 @@ section { text-align: left; overflow:hidden; height:100%; width: 100%; margin: 0
 /* ===========================================
 	HOME
 ============================================== */
+#browser, #browser p {color:#3da5a0;font-size:12px;float:right;margin:0 5px 0 0;}
 #home { padding:0; height: 345px; text-align: center; background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(255,255,255,1)), to(rgba(255,255,255,0))); background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));*/}
 #logo { margin-top: 80px; width: 100%; height: 170px; }
 #logo a { border: 0; margin: 0 auto; width: 266px; height: 170px; display: block; background: transparent url('/images/sp12.png') no-repeat ;  }
