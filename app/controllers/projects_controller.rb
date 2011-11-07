@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
             countries = params[:country].split(',')
             condition = []
             countries.each do |country|
-              condition << "#{SpProject.table_name}.country = ?"
+              condition << "#{SpProject.table_name}.country LIKE ?"
               conditions[1] << '%'+country+'%'
             end
             conditions[0] << '(' + condition.join(' OR ') + ')'
