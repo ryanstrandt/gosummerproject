@@ -27,11 +27,11 @@
 				<div id="projContact">				
 					<h3>Contact Information</h3>
 					<h4>Project Director:</h4>
-					<p><%= @project.pd_name %></p>
+					<p><%= mail_to @project.pd_email, @project.pd_name %></p>
 					<h4>Project Director:</h4>
-					<p><%= @project.apd_name %></p>
+					<p><%= mail_to @project.apd_email, @project.apd_name %></p>
 					<h4>Project Director:</h4>
-					<p><%= @project.opd_name %></p>
+					<p><%= mail_to @project.opd_email, @project.opd_name %></p>
 				</div>			
 			</div>
 		</div>

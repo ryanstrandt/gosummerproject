@@ -4,6 +4,7 @@ class Person < ActiveRecord::Base
   set_table_name   "ministry_person"
   set_primary_key  "personID"
   
+  has_one :current_address, :foreign_key => "fk_PersonID", :conditions => "addressType = 'current'", :class_name => '::Address'
   
   scope :not_secure, where("isSecure != 'T' or isSecure IS NULL")
   

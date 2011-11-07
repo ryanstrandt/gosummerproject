@@ -235,7 +235,7 @@ class SpProject < ActiveRecord::Base
     opd.current_address.email if opd && opd.current_address
   end
 
-  def apd_email
+  def opd_email
     opd_email_non_secure if (country_status == 'open' && opd && !opd.is_secure?)
   end
 
