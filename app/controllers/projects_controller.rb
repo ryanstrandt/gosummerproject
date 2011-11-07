@@ -28,8 +28,13 @@ class ProjectsController < ApplicationController
             conditions[1] << params[:city]
           end
           if params[:country] && !params[:country].empty?
-            conditions[0] << "#{SpProject.table_name}.country = ?"
-            conditions[1] << params[:country]
+            countries = params[:country].split(',')
+            condition = []
+            countries.each do |country|
+              condition << "#{SpProject.table_name}.country = ?"
+              conditions[1] << '%'+country+'%'
+            end
+            conditions[0] << '(' + condition.join(' OR ') + ')'
           end
           # this option has two modes of access to accomodate the form post and 
           # the xml feed. params[:project][:partner] is for the form post.
