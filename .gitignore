@@ -4,3 +4,4 @@ config/deploy.rb
 log/
 tmp/
 vendor/ruby/
+.project
