@@ -207,6 +207,14 @@ class SpProject < ActiveRecord::Base
     apd_name_non_secure if (country_status == 'open' && apd && !apd.is_secure?)
   end
 
+  def opd_name_non_secure
+    opd.informal_full_name if opd
+  end
+  
+  def opd_name
+    opd_name_non_secure if (country_status == 'open' && opd && !opd.is_secure?)
+  end
+
   def pd_email_non_secure
     pd.current_address.email if pd && pd.current_address
   end
@@ -221,6 +229,14 @@ class SpProject < ActiveRecord::Base
 
   def apd_email
     apd_email_non_secure if (country_status == 'open' && apd && !apd.is_secure?)
+  end
+
+  def opd_email_non_secure
+    opd.current_address.email if opd && opd.current_address
+  end
+
+  def apd_email
+    opd_email_non_secure if (country_status == 'open' && opd && !opd.is_secure?)
   end
 
   def primary_focus_name
