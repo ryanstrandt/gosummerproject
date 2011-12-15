@@ -48,12 +48,12 @@ class ProjectsController < ApplicationController
             conditions[1] << partner
             conditions[1] << partner
           end
-          if params[:aoa] && !params[:aoa].empty?
-            aoas = params[:aoa].split(',')
+          if params[:world_region] && !params[:world_region].empty?
+            world_regions = params[:world_region].split(',')
             condition = []
-            aoas.each do |aoa| 
-              condition << "#{SpProject.table_name}.aoa LIKE ?"
-              conditions[1] << '%'+aoa+'%'
+            world_regions.each do |world_region| 
+              condition << "#{SpProject.table_name}.world_region LIKE ?"
+              conditions[1] << '%'+world_region+'%'
             end
             conditions[0] << '(' + condition.join(' OR ') + ')'
           end
