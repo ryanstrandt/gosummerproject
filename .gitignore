@@ -5,3 +5,4 @@ log/
 tmp/
 vendor/ruby/
 .project
+db/development.sqlite3

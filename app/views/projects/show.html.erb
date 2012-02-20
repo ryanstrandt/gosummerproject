@@ -37,6 +37,7 @@
 		</div>
     <div id="Content">
 			<h1><%= @project.name %></h1><br />  
+      <%= link_to('Apply now', "https://sp.campuscrusadeforchrist.com/apply/#{@project.id}") %>
       <h2>Description</h2>
 			<p><%= raw @project.description %></p>
 			<div class="facebook_container">
